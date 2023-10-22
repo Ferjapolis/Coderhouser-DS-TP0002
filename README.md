@@ -18,5 +18,68 @@ Además , a medida que la escena competitiva ha crecido, también se ha vuelto m
 
 El crecimiento fenomenal de League of Legends no solo se ha manifestado en números, sino también en la dedicación apasionada de su comunidad de jugadores. Como hemos observado, millones de usuarios se conectan diariamente, y esta base activa de jugadores ha demostrado un compromiso inquebrantable con el juego. Participan activamente en foros de discusión, utilizan redes sociales para compartir estrategias y experiencias, y se sumergen en plataformas de transmisión en vivo para aprender y entretenerse. Además, la formación de clanes y equipos amateur ha impulsado la competencia a niveles locales y regionales, creando una vibrante escena competitiva en todo el mundo. Esta comunidad apasionada y comprometida es un testimonio de la influencia duradera de League of Legends en el mundo de los deportes electrónicos.
 
-### Desbloqueando el Potencial Oculto
-En nuestro análisis profundo de las partidas en la liga Diamante, descubrimos un factor crucial para la victoria en los primeros 10 minutos de juego: un rápido crecimiento en oro, experiencia y asesinatos. Los datos revelaron que, en un sorprendente 68% de los casos, el equipo que logra un desempeño destacado en estos aspectos en el período inicial de la partida termina asegurando la victoria. Esta revelación es un indicio claro de que el rendimiento temprano puede ser un predictor fundamental del resultado final del juego. Con PoroIA, estamos aprovechando estos conocimientos para proporcionar a los jugadores la ventaja competitiva que necesitan para tomar decisiones informadas y alcanzar la victoria en el mundo de League of Legends.
+
+---
+
+### Abstracto:
+El presente informe tiene como objetivo analizar un conjunto de datos de partidas clasificatorias Diamante de League of Legends (LoL) en los primeros 10 minutos, con el propósito de proporcionar información valiosa para un nuevo equipo que busca optimizar su rendimiento y estrategias. El dataset contiene estadísticas de aproximadamente 10,000 partidas con jugadores de niveles similares. El valor objetivo a predecir es si el equipo azul ganó la partida (valor 1) o no (valor 0).
+
+Referncias:
+- https://www.redbull.com/ar-es/lol-el-sistema-de-ranking-de-league-of-legends-explicado
+- https://tips.gg/es/lol/teams/
+
+
+### Contexto Comercial:
+El equipo de League of Legends se enfrenta a desafíos complejos al competir en el nivel Diamante, donde la estrategia y el rendimiento individual son fundamentales para lograr el éxito. Analizar los datos de partidas clasificatorias puede proporcionar una ventaja competitiva al descubrir patrones y tendencias que impulsen la toma de decisiones efectiva durante el juego.
+
+### Problema Comercial:
+El nuevo equipo de League of Legends busca mejorar su rendimiento y estrategias para competir de manera más efectiva en partidas clasificatorias de nivel Diamante. El análisis de datos se presenta como una oportunidad para encontrar patrones clave que impulsen jugadas y estrategias más efectivas para alcanzar la victoria.
+
+### Contexto Analítico:
+El dataset contiene 38 características que describen diferentes aspectos de la partida durante los primeros 10 minutos. Algunos de los atributos incluyen asesinatos, muertes, oro, experiencia y nivel para ambos equipos, azul y rojo. Se realizará un análisis exploratorio de datos para obtener información significativa sobre el rendimiento del equipo azul y rojo durante los primeros 10 minutos de la partida.
+
+
+## insight encontrados
+
+**El control temprano del mapa es crucial**: Equipos que colocan más "Warding totems" y obtienen más asesinatos y torres en los primeros 10 minutos tienden a tener una mayor probabilidad de victoria. Esto sugiere que el control temprano del mapa y las estrategias de emboscada son fundamentales para obtener una ventaja inicial.
+
+**La importancia de los objetivos neutrales**: Equipos que aseguran más dragones y Herald en los primeros 10 minutos tienen una mayor tasa de victoria. Esto destaca la relevancia de coordinar y priorizar la captura de objetivos neutrales para obtener beneficios significativos para todo el equipo.
+
+**El desempeño individual impacta en el resultado**: El número de asistencias y las diferencias de oro y experiencia entre los equipos son indicadores cruciales de la probabilidad de victoria. Jugadores que contribuyen con más asistencias y ayudan a mantener una ventaja económica y de experiencia son valiosos para el éxito del equipo.
+
+**El nivel promedio del equipo marca la diferencia**: Un mayor nivel promedio del equipo azul en los primeros 10 minutos se correlaciona con una mayor probabilidad de ganar. Esto resalta la importancia de mantener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.
+
+**Diferencias de oro y experiencia determinantes**: Las diferencias de oro y experiencia entre los equipos en los primeros 10 minutos están fuertemente vinculadas a los resultados. Equipos con una ventaja significativa en estos aspectos tienen una mayor posibilidad de obtener la victoria.
+
+**Roles clave para el éxito**: Identificar roles específicos que influyen significativamente en la victoria podría proporcionar una ventaja estratégica. Por ejemplo, un jungla efectivo que asegura objetivos neutrales o un carry con muchas asistencias podrían ser cruciales para el equipo.
+
+**Adaptabilidad y estrategia**: Los equipos que pueden ajustar sus tácticas en función de la situación en los primeros 10 minutos tienen una mayor probabilidad de lograr la victoria. La capacidad de adaptarse a diferentes condiciones y enemigos es esencial en un juego tan dinámico como League of Legends.
+
+
+## Hipotesis
+
+Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la probabilidad de victoria en el juego.
+
+- **Hipótesis 1**: Control temprano del mapa y victoria
+Equipos que logran un mayor control del mapa mediante la colocación de más "Warding totems" en áreas estratégicas durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida.
+
+- **Hipótesis 2**: Relación entre asesinatos y tasa de victoria
+El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de asesinatos, más alta será la probabilidad de ganar.
+
+- **Hipótesis 3**: Impacto de objetivos neutrales en la victoria
+Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios significativos para todo el equipo.
+
+- **Hipótesis 4**: Importancia de la ventaja económica y de experiencia
+Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.
+
+- **Hipótesis 5**: Contribución individual y tasa de victoria
+Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en la tasa de victoria de su equipo en las partidas clasificatorias Diamante.
+
+- **Hipótesis 6**: Roles clave para el éxito
+Identificar roles específicos, como un jungla efectivo o un carry con muchas asistencias, será crucial para el éxito del equipo y aumentará sus posibilidades de ganar.
+
+- **Hipótesis 7**: Nivel promedio y probabilidad de victoria
+Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá una mayor probabilidad de ganar la partida.
+
+- **Hipótesis 8**: Adaptabilidad y éxito
+Equipos que pueden ajustar sus tácticas y estrategias según la situación en los primeros 10 minutos tendrán una mayor probabilidad de lograr la victoria en partidas clasificatorias Diamante.

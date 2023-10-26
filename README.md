@@ -1,8 +1,14 @@
 
-## PoroIA - La Clave para el Éxito en el Mundo de League of Legends
+# ML para el Éxito en el Mundo de League of Legends
 
+## Índice
+   1. ¿Qué es League of Legends?
+   2. Objetivos del análisis
+   3. Fuente de datos
+   4. Implicaciones de los hallazgos
+   5. Resumen de los resultados
 
-### ¿Qué es League of Legends?
+## ¿Qué es League of Legends? 
 Antes de adentrarnos en nuestra propuesta, permítanme    ofrecerles un contexto sobre League of Legends. Este videojuego, desarrollado por Riot Games, ha revolucionado el mundo de los deportes electrónicos. League of Legends es un juego en línea de estrategia y acción, que reúne a jugadores de todo el mundo en partidas competitivas. Con millones de jugadores y espectadores, League of Legends se ha convertido en un fenómeno global.
 
 ![mapa](https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/LoL/2019/2019-How-to-improve-your-lol-predictions/Esports-Hero-Esports-How-to-improve-your-LoL-predictions.jpg)
@@ -21,43 +27,36 @@ El crecimiento fenomenal de League of Legends no solo se ha manifestado en núme
 
 ---
 
-### Abstracto:
+### Objetivos del análisis:
 El presente informe tiene como objetivo analizar un conjunto de datos de partidas clasificatorias Diamante de League of Legends (LoL) en los primeros 10 minutos, con el propósito de proporcionar información valiosa para un nuevo equipo que busca optimizar su rendimiento y estrategias. El dataset contiene estadísticas de aproximadamente 10,000 partidas con jugadores de niveles similares. El valor objetivo a predecir es si el equipo azul ganó la partida (valor 1) o no (valor 0).
 
 Referncias:
 - https://www.redbull.com/ar-es/lol-el-sistema-de-ranking-de-league-of-legends-explicado
 - https://tips.gg/es/lol/teams/
 
+---
 
-### Contexto Comercial:
-El equipo de League of Legends se enfrenta a desafíos complejos al competir en el nivel Diamante, donde la estrategia y el rendimiento individual son fundamentales para lograr el éxito. Analizar los datos de partidas clasificatorias puede proporcionar una ventaja competitiva al descubrir patrones y tendencias que impulsen la toma de decisiones efectiva durante el juego.
+### Insight encontrados [Code](notebook/002_Insight.ipynb)
 
-### Problema Comercial:
-El nuevo equipo de League of Legends busca mejorar su rendimiento y estrategias para competir de manera más efectiva en partidas clasificatorias de nivel Diamante. El análisis de datos se presenta como una oportunidad para encontrar patrones clave que impulsen jugadas y estrategias más efectivas para alcanzar la victoria.
-
-### Contexto Analítico:
-El dataset contiene 38 características que describen diferentes aspectos de la partida durante los primeros 10 minutos. Algunos de los atributos incluyen asesinatos, muertes, oro, experiencia y nivel para ambos equipos, azul y rojo. Se realizará un análisis exploratorio de datos para obtener información significativa sobre el rendimiento del equipo azul y rojo durante los primeros 10 minutos de la partida.
+- **Control temprano del mapa**: El hecho de que equipos que colocan más "Warding totems", obtienen más asesinatos y torres tengan una mayor probabilidad de victoria resalta la importancia de la visión del mapa y las estrategias de emboscada para obtener ventajas iniciales.
+![insight_001](static/img/Insight_001.png)
 
 
-## insight encontrados
+- **Importancia de los objetivos neutrales**: La correlación entre asegurar más dragones y Herald en los primeros 10 minutos y una mayor tasa de victoria enfatiza la necesidad de coordinar y priorizar la captura de objetivos neutrales para obtener beneficios significativos para todo el equipo.
+![insight_001](static/img/Insight_002.png)
 
-**El control temprano del mapa es crucial**: Equipos que colocan más "Warding totems" y obtienen más asesinatos y torres en los primeros 10 minutos tienden a tener una mayor probabilidad de victoria. Esto sugiere que el control temprano del mapa y las estrategias de emboscada son fundamentales para obtener una ventaja inicial.
+- **Desempeño individual y ventaja económica**: El número de asistencias y las diferencias de oro y experiencia entre los equipos como indicadores cruciales de la probabilidad de victoria destacan la importancia del desempeño individual y la ventaja económica para el éxito del equipo.
+![insight_001](static/img/Insight_003.png)
 
-**La importancia de los objetivos neutrales**: Equipos que aseguran más dragones y Herald en los primeros 10 minutos tienen una mayor tasa de victoria. Esto destaca la relevancia de coordinar y priorizar la captura de objetivos neutrales para obtener beneficios significativos para todo el equipo.
+- **Nivel promedio del equipo**: La correlación entre un mayor nivel promedio del equipo azul y una mayor probabilidad de ganar subraya la importancia de mantener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.ntener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.
+![insight_001](static/img/Insight_004.png)
 
-**El desempeño individual impacta en el resultado**: El número de asistencias y las diferencias de oro y experiencia entre los equipos son indicadores cruciales de la probabilidad de victoria. Jugadores que contribuyen con más asistencias y ayudan a mantener una ventaja económica y de experiencia son valiosos para el éxito del equipo.
+- **Diferencias de oro y experiencia determinantes**: La fuerte vinculación entre las diferencias de oro y experiencia entre los equipos en los primeros 10 minutos y los resultados resalta la relevancia de obtener una ventaja significativa en estos aspectos.
+![insight_001](static/img/Insight_005.png)
 
-**El nivel promedio del equipo marca la diferencia**: Un mayor nivel promedio del equipo azul en los primeros 10 minutos se correlaciona con una mayor probabilidad de ganar. Esto resalta la importancia de mantener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.
+---
 
-**Diferencias de oro y experiencia determinantes**: Las diferencias de oro y experiencia entre los equipos en los primeros 10 minutos están fuertemente vinculadas a los resultados. Equipos con una ventaja significativa en estos aspectos tienen una mayor posibilidad de obtener la victoria.
-
-**Roles clave para el éxito**: Identificar roles específicos que influyen significativamente en la victoria podría proporcionar una ventaja estratégica. Por ejemplo, un jungla efectivo que asegura objetivos neutrales o un carry con muchas asistencias podrían ser cruciales para el equipo.
-
-**Adaptabilidad y estrategia**: Los equipos que pueden ajustar sus tácticas en función de la situación en los primeros 10 minutos tienen una mayor probabilidad de lograr la victoria. La capacidad de adaptarse a diferentes condiciones y enemigos es esencial en un juego tan dinámico como League of Legends.
-
-
-## Hipotesis
-
+### Hipotesis
 Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la probabilidad de victoria en el juego.
 
 - **Hipótesis 1**: Control temprano del mapa y victoria

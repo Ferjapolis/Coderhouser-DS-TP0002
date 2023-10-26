@@ -36,7 +36,10 @@ Referncias:
 
 ---
 
-### Insight encontrados [Code](notebook/002_Insight.ipynb)
+### EDA ([Code](notebooks/001_EDA.ipynb))
+
+---
+### Insight encontrados ([Code](notebooks/002_Insight.ipynb))
 
 - **Control temprano del mapa**: El hecho de que equipos que colocan más "Warding totems", obtienen más asesinatos y torres tengan una mayor probabilidad de victoria resalta la importancia de la visión del mapa y las estrategias de emboscada para obtener ventajas iniciales.
 ![insight_001](static/img/Insight_001.png)
@@ -56,7 +59,7 @@ Referncias:
 
 ---
 
-### Hipotesis
+### Hipotesis ([Code](notebooks/003_Outsight.ipynb))
 Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la probabilidad de victoria en el juego.
 
 - **Hipótesis 1**: Control temprano del mapa y victoria

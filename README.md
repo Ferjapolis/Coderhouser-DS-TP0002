@@ -62,14 +62,25 @@ Referncias:
 ### Hipotesis ([Code](notebooks/003_Outsight.ipynb))
 Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la probabilidad de victoria en el juego.
 
-- **Hipótesis 1**: Control temprano del mapa y victoria
-Equipos que logran un mayor control del mapa mediante la colocación de más "Warding totems" en áreas estratégicas durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida.
-
-- **Hipótesis 2**: Relación entre asesinatos y tasa de victoria
+- **Hipótesis 1**: Relación entre asesinatos y tasa de victoria
 El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de asesinatos, más alta será la probabilidad de ganar.
+![insight_001](static/img/Hypothesis_001.png)
 
-- **Hipótesis 3**: Impacto de objetivos neutrales en la victoria
+- **Hipótesis 2**: Impacto de objetivos neutrales en la victoria
 Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios significativos para todo el equipo.
+![insight_001](static/img/Hypothesis_002A.png)
+![insight_001](static/img/Hypothesis_002B.png)
+
+podemos resumir la relación entre la captura de Dragones y Herald y la factibilidad de la victoria de la siguiente manera:
+
+- Cuando un equipo no captura ni Dragon ni Herald, la probabilidad de victoria es del 40.52%.
+- Cuando un equipo captura Dragon pero no Herald, la probabilidad de victoria es del 38.50%.
+- Cuando un equipo no captura Dragon pero captura Herald, la probabilidad de victoria es del 10.43%.
+- Cuando un equipo captura tanto Dragon como Herald, la probabilidad de victoria es del 10.56%.
+
+![insight_001](static/img/Hypothesis_002.png)
+Basándonos en estos datos, podemos observar que la probabilidad de victoria es más alta cuando un equipo captura al menos uno de estos objetivos neutrales (Dragon o Herald) en comparación con cuando no captura ninguno. Esto sugiere que la captura de estos objetivos neutrales está relacionada con una mayor factibilidad de la victoria en las partidas de League of Legends. La probabilidad de victoria es especialmente alta cuando se capturan ambos objetivos.
+
 
 - **Hipótesis 4**: Importancia de la ventaja económica y de experiencia
 Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.

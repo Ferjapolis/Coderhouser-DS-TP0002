@@ -1,6 +1,17 @@
 
 # ML para el Éxito en el Mundo de League of Legends
 
+## Lista de pendientes
+
+1. Añadir enlaces a los distintos apartados del proyecto, como el contexto analítico, en el índice principal.
+2. Resumir la parte introductoria (abstract) para que sea más concisa y refleje claramente el trabajo y las motivaciones.
+3. Definir claramente el público o audiencia del proyecto, ya sea jugadores de League of Legends o inversores de deportes electrónicos, en el contexto y problema comercial.
+4. Considerar la posibilidad de enriquecer el dataset con una API, siguiendo la recomendación de Coderhouse.
+5. Documentar cualquier modificación realizada en la limpieza y reestructuración del dataset, especialmente si se crean nuevas variables, se eliminan valores nulos o outliers.
+6. Explorar herramientas de análisis estadístico, como pruebas de hipótesis, para evaluar la relación entre los features mencionados en los insights y la variable target.
+7. Crear una presentación de al menos 12 diapositivas siguiendo el modelo propuesto por Coderhouse o implementar algo similar en GitHub para cumplir con los requisitos de la pre-entrega.
+8. Revisar el ejemplo de presentación en GitHub para asegurarse de cubrir todos los puntos importantes.
+ 
 ## Índice
    1. ¿Qué es League of Legends?
    2. Objetivos del análisis
@@ -93,13 +104,12 @@ Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tend
    En general, los equipos que capturan tanto el Dragon como el Herald tienden a obtener una mayor cantidad de experiencia y oro en comparación con los equipos que no capturan estos objetivos. La captura de objetivos neutrales (Dragon y Herald) en el juego está relacionada con una ventaja significativa en términos de recursos (experiencia y oro) para el equipo que los asegura. Estos valores son promedios y pueden variar según la estrategia y otros factores del juego.
 
   podemos resumir la relación entre la captura de Dragones y Herald y la factibilidad de la victoria de la siguiente manera:
-
+  ![insight_002C](static/img/Hypothesis_002.png)
   - Cuando un equipo no captura ni Dragon ni Herald, la probabilidad de victoria es del 40.52%.
   - Cuando un equipo captura Dragon pero no Herald, la probabilidad de victoria es del 38.50%.
   - Cuando un equipo no captura Dragon pero captura Herald, la probabilidad de victoria es del 10.43%.
   - Cuando un equipo captura tanto Dragon como Herald, la probabilidad de victoria es del 10.56%.
 
-  ![insight_002C](static/img/Hypothesis_002.png)
   Basándonos en estos datos, podemos observar que la probabilidad de victoria es más alta cuando un equipo captura al menos uno de estos objetivos neutrales (Dragon o Herald) en comparación con cuando no captura ninguno. Esto sugiere que la captura de estos objetivos neutrales está relacionada con una mayor factibilidad de la victoria en las partidas de League of Legends. La probabilidad de victoria es especialmente alta cuando se capturan ambos objetivos.
 
 

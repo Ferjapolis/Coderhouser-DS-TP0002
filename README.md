@@ -1,16 +1,5 @@
 
 # ML para el Éxito en el Mundo de League of Legends
-
-## Lista de pendientes
-
-1. Añadir enlaces a los distintos apartados del proyecto, como el contexto analítico, en el índice principal.
-2. Resumir la parte introductoria (abstract) para que sea más concisa y refleje claramente el trabajo y las motivaciones.
-3. Definir claramente el público o audiencia del proyecto, ya sea jugadores de League of Legends o inversores de deportes electrónicos, en el contexto y problema comercial.
-4. Considerar la posibilidad de enriquecer el dataset con una API, siguiendo la recomendación de Coderhouse.
-5. Documentar cualquier modificación realizada en la limpieza y reestructuración del dataset, especialmente si se crean nuevas variables, se eliminan valores nulos o outliers.
-6. Explorar herramientas de análisis estadístico, como pruebas de hipótesis, para evaluar la relación entre los features mencionados en los insights y la variable target.
-7. Crear una presentación de al menos 12 diapositivas siguiendo el modelo propuesto por Coderhouse o implementar algo similar en GitHub para cumplir con los requisitos de la pre-entrega.
-8. Revisar el ejemplo de presentación en GitHub para asegurarse de cubrir todos los puntos importantes.
  
 ## Índice
    1. ¿Qué es League of Legends?

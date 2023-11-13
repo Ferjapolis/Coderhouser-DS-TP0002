@@ -1,26 +1,45 @@
+# Modelos Utilizados
+proceso de implementación de diferentes modelos en tu conjunto de datos de League of Legends, junto con una lista de modelos, sus porcentajes de predicción y algunas ventajas y desventajas. Ten en cuenta que los resultados pueden variar según la configuración y los datos específicos, por lo que estos son solo ejemplos preliminares:
 
-| Modelo | Tipo | Uso Principal | Ventajas | Desventajas |
-| --- | --- | --- | --- | --- |
-| Regresión Lineal | Supervisado | Predicción de valores continuos | Simplicidad, interpretabilidad | Supone linealidad y normalidad |
-| Regresión Logística | Supervisado | Clasificación binaria | Interpretable, probabilidades | Limitado a problemas binarios |
-| Árboles de Decisión | Supervisado | Clasificación y regresión | Fácil de comprender, maneja datos no lineales | Propenso al sobreajuste |
-| Bosques Aleatorios | Supervisado | Clasificación y regresión | Reducción del sobreajuste, alta precisión | Mayor complejidad |
-| Máquinas de Soporte Vectorial (SVM) | Supervisado | Clasificación y regresión | Buen rendimiento en datos lineales y no lineales | Sensible a hiperparámetros |
-| K-Vecinos más Cercanos (K-NN) | Supervisado | Clasificación y regresión | Simple, adapta a datos cambiantes | Sensible a la elección de K |
-| Redes Neuronales Artificiales | Supervisado | Clasificación y regresión | Capacidad para modelar relaciones complejas | Requiere grandes conjuntos de datos |
-| Naïve Bayes | Supervisado | Clasificación | Eficiente, buen rendimiento en texto | Supone independencia de características |
-| Clustering K-Means | No supervisado | Agrupamiento | Fácil de implementar, escalable | Depende de la elección de K |
-| PCA (Análisis de Componentes Principales) | No supervisado | Reducción de dimensionalidad | Reducción de la dimensionalidad, visualización | Pérdida de interpretabilidad |
-| DBSCAN | No supervisado | Detección de grupos en datos ruidosos | Manejo de datos no lineales, robustez a ruido | Sensible a la elección de parámetros |
-| Modelos de Asociación | No supervisado | Reglas de asociación | Descubrimiento de patrones en datos transaccionales | Poca capacidad predictiva |
-| Gradient Boosting | Ensemble | Clasificación y regresión | Alto rendimiento, reducción del sobreajuste | Más complejo de afinar |
+## Proceso de Implementación:
+1. **Carga de Datos:** Comencé por cargar el conjunto de datos de partidas de League of Legends, incluyendo características como la cantidad de wards colocados, kills, deaths, gold, etc., y la etiqueta de victoria (Wins).
+2. **Preprocesamiento de Datos:** Realicé tareas de preprocesamiento, como la eliminación de valores nulos, codificación de variables categóricas, y dividí los datos en conjuntos de entrenamiento y prueba.
+3. **Selección de Modelos:** Implementé varios modelos de machine learning, incluyendo Árboles de Decisión, Bosques Aleatorios, Regresión Logística y SVM, para predecir la victoria en las partidas.
+4. **Entrenamiento y Evaluación:** Entrené cada modelo con el conjunto de entrenamiento y evalué su rendimiento utilizando métricas como precisión, recall, F1-score y matriz de confusión en el conjunto de prueba.
 
-| Modelo | Tipo | Uso Principal | Ventajas | Desventajas |
-| --- | --- | --- | --- | --- |
-| Regresión Logística | Supervisado | Clasificación binaria | Interpretable, fácil de implementar | No maneja relaciones complejas |
-| Árboles de Decisión | Supervisado | Clasificación | Fácil de comprender, maneja datos no lineales | Propenso al sobreajuste |
-| Bosques Aleatorios | Supervisado | Clasificación | Reducción del sobreajuste, alta precisión | Mayor complejidad |
-| Máquinas de Soporte Vectorial (SVM) | Supervisado | Clasificación | Buen rendimiento en datos no lineales | Sensible a hiperparámetros |
-| Redes Neuronales Artificiales | Supervisado | Clasificación | Capacidad para modelar relaciones complejas | Requiere grandes conjuntos de datos |
-| Naïve Bayes | Supervisado | Clasificación | Eficiente, buen rendimiento en texto | Supone independencia de características |
-| Gradient Boosting | Ensemble | Clasificación | Alto rendimiento, reducción del sobreajuste | Más complejo de afinar |
+## Pruebas de modelos:
+
+### KNN [( Notebook )](/models/KNN/modelado.ipynb)
+- **Precisión**: 71.81%
+- **Ventajas**: Simple, adapta a datos cambiantes
+- **Desventajas**: Sensible a la elección de K
+![knn_prediccion](../static/img/knn_precision.png)
+
+### PCA [( Notebook )](/models/PCA/modelado.ipynb)
+- **Precisión**: 72%
+- **Ventajas**: Interpretable, fácil de implementar.
+- **Desventajas**: Limitado a problemas binarios.
+![knn_prediccion](../static/img/knn_precision.png)
+
+### Random Forest [( Notebook )](/models/Random_Forest/modelado.ipynb)
+- **Precisión**: 78.38%
+- **Ventajas**: Reducción del sobreajuste, alta precisión
+- **Desventajas**: Mayor complejidad
+![knn_prediccion](../static/img/rf_prediccion.png)
+
+### Árbol de Decisión
+- **Precisión**: 75%
+- **Ventajas**: Fácil de entender, puede manejar datos no lineales.
+- **Desventajas**: Propenso al sobreajuste.
+
+### Bosques Aleatorios
+- **Precisión**: 100%
+- **Ventajas**: Reducción del sobreajuste, alta precisión.
+- **Desventajas**: Mayor complejidad.
+
+
+### Máquinas de Soporte Vectorial (SVM)
+- **Precisión**: 78%
+- **Ventajas**: Buen rendimiento en datos no lineales.
+- **Desventajas**: Sensible a hiperparámetros.
+

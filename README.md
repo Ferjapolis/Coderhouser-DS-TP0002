@@ -42,19 +42,24 @@ Referncias:
 ### Insight encontrados ([Notebook](notebooks/002_Insight.ipynb))
 
 - **Control temprano del mapa**: El hecho de que equipos que colocan más "Warding totems", obtienen más asesinatos y torres tengan una mayor probabilidad de victoria resalta la importancia de la visión del mapa y las estrategias de emboscada para obtener ventajas iniciales.
+
 ![insight_001](static/img/Insight_001.png)
 
 
 - **Importancia de los objetivos neutrales**: La correlación entre asegurar más dragones y Herald en los primeros 10 minutos y una mayor tasa de victoria enfatiza la necesidad de coordinar y priorizar la captura de objetivos neutrales para obtener beneficios significativos para todo el equipo.
+
 ![insight_001](static/img/Insight_002.png)
 
 - **Desempeño individual y ventaja económica**: El número de asistencias y las diferencias de oro y experiencia entre los equipos como indicadores cruciales de la probabilidad de victoria destacan la importancia del desempeño individual y la ventaja económica para el éxito del equipo.
+
 ![insight_001](static/img/Insight_003.png)
 
 - **Nivel promedio del equipo**: La correlación entre un mayor nivel promedio del equipo azul y una mayor probabilidad de ganar subraya la importancia de mantener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.ntener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.
+
 ![insight_001](static/img/Insight_004.png)
 
 - **Diferencias de oro y experiencia determinantes**: La fuerte vinculación entre las diferencias de oro y experiencia entre los equipos en los primeros 10 minutos y los resultados resalta la relevancia de obtener una ventaja significativa en estos aspectos.
+
 ![insight_001](static/img/Insight_005.png)
 
 ---
@@ -64,6 +69,7 @@ Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis
 
 - **Hipótesis 1**: Relación entre asesinatos y tasa de victoria
 El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de asesinatos, más alta será la probabilidad de ganar.
+
 ![insight_001](static/img/Hypothesis_001.png)
 
 
@@ -71,6 +77,7 @@ El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se
 Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios significativos para todo el equipo.
 
   ![insight_002A](static/img/Hypothesis_002A.png)
+
   La relación entre la captura del Dragon y la cantidad total de experiencia y oro en el juego:
   Para el equipo que captura el Dragon (Dragon si [D1]):
   - La cantidad promedio de experiencia total obtenida es de aproximadamente 18,235.37.
@@ -81,6 +88,7 @@ Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tend
   - La cantidad promedio de oro total obtenida también es menor, con un valor promedio de aproximadamente 16,277.49.
 
    ![insight_002B](static/img/Hypothesis_002B.png)
+
    Para el equipo que captura el Herald (Herald si [H1]):
 
   - La cantidad promedio de experiencia total obtenida es de aproximadamente 18,328.27.
@@ -93,7 +101,9 @@ Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tend
    En general, los equipos que capturan tanto el Dragon como el Herald tienden a obtener una mayor cantidad de experiencia y oro en comparación con los equipos que no capturan estos objetivos. La captura de objetivos neutrales (Dragon y Herald) en el juego está relacionada con una ventaja significativa en términos de recursos (experiencia y oro) para el equipo que los asegura. Estos valores son promedios y pueden variar según la estrategia y otros factores del juego.
 
   podemos resumir la relación entre la captura de Dragones y Herald y la factibilidad de la victoria de la siguiente manera:
+
   ![insight_002C](static/img/Hypothesis_002.png)
+
   - Cuando un equipo no captura ni Dragon ni Herald, la probabilidad de victoria es del 40.52%.
   - Cuando un equipo captura Dragon pero no Herald, la probabilidad de victoria es del 38.50%.
   - Cuando un equipo no captura Dragon pero captura Herald, la probabilidad de victoria es del 10.43%.
@@ -104,16 +114,19 @@ Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tend
 
 - **Hipótesis 3**: Importancia de la ventaja económica y de experiencia
 Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.
+
    ![insight_003](static/img/Hypothesis_003.png)
 
 - **Hipótesis 4**: Contribución individual y tasa de victoria Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en la tasa de victoria de su equipo en las partidas clasificatorias Diamante.
 
   ![insight_004](static/img/Hypothesis_004.png)
+
   los jugadores que contribuyen con un mayor número de asistencias tienen una mayor probabilidad de obtener la victoria en este nivel de juego. Este resultado sugiere que el juego en equipo y la contribución individual son factores importantes para el éxito en las partidas de Diamante en League of Legends.
 
 - **Hipótesis 5**: Nivel promedio y probabilidad de victoria Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá una mayor probabilidad de ganar la partida.
 
   ![insight_005](static/img/Hypothesis_005.png)
+
   El resultado obtenido de 69.43k de nivel promedio en partidas victoriosas y 67.29k de nivel promedio en partidas derrotadas indica que, en promedio, no hay una gran diferencia en el nivel promedio de los jugadores entre las partidas ganadas y las partidas perdidas.
 
   Esto sugiere que, al menos en el contexto de las partidas analizadas, el nivel promedio de los jugadores en los primeros 10 minutos no parece ser un factor determinante para la tasa de victoria en League of Legends. La diferencia en el nivel promedio entre partidas ganadas y perdidas es relativamente pequeña, lo que sugiere que otros factores pueden tener un impacto más significativo en el resultado de la partida.

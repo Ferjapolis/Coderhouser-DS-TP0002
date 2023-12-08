@@ -1,3 +1,9 @@
+# Entrenando un algoritmo de Machine Learning
+Deberás entregar el décimo avance de tu proyecto final. Continuaremos hablando sobre lo trabajado en la segunda pre entrega del proyecto final. Crearás un notebook donde trabajarás sobre los datos elegidos en la primera y segunda pre entrega del proyecto final. Posteriormente, realizarás las etapas de: 
+1. Encoding
+2. Ingeniería de atributos
+3. Entrenamiento de un modelo de Machine Learning Supervisado (Clasificación o Regresión) o no supervisado dependiendo de la pregunta problema.
+
 ### Consigna:
 - Utilizar una fuente de datos para resolver problemas de clasificación o regresión. 
 - Realizar los procesos de Encoding, Feature Engineering y entrenamiento de un modelo de Machine Learning (Clasificación o Regresión)

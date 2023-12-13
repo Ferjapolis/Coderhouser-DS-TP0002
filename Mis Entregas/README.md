@@ -1,3 +1,5 @@
+El proyecto aborda de manera integral los conceptos y técnicas aprendidos a lo largo del curso de Coderhouse. Desde la exploración inicial de datos hasta la mejora de modelos de Machine Learning, cada entrega representa un paso crucial en la aplicación de habilidades de Ciencia de Datos en el contexto específico de las partidas de League of Legends. 
+
 # Listado de desafios Coderhouse
 
 | Clase | Titulo | Entrega |

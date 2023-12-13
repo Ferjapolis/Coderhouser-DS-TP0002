@@ -1,132 +1,115 @@
-
 # ML para el Éxito en el Mundo de League of Legends
- 
-## Índice
-   1. ¿Qué es League of Legends?
-   2. Objetivos del análisis
-   3. Fuente de datos
-   4. Implicaciones de los hallazgos
-   5. Resumen de los resultados
 
-## ¿Qué es League of Legends? 
-Antes de adentrarnos en nuestra propuesta, permítanme    ofrecerles un contexto sobre League of Legends. Este videojuego, desarrollado por Riot Games, ha revolucionado el mundo de los deportes electrónicos. League of Legends es un juego en línea de estrategia y acción, que reúne a jugadores de todo el mundo en partidas competitivas. Con millones de jugadores y espectadores, League of Legends se ha convertido en un fenómeno global.
+## Indice
+1. Introducción
+    - [1.1 Contexto y Justificación del Trabajo](#11-contexto-y-justificación-del-análisis)
+    - [1.2 Objetivos](#12-objetivos-del-análisis)
+    - [1.3 Enfoque y Método a Seguir](#13-enfoque-y-método-a-seguir)
+    - [1.4 Planificación del Trabajo](#14-planificación-del-trabajo)
+    - [1.5 Breve Sumario de Productos Obtenidos](#15-breve-sumario-de-productos-obtenidos)
+
+2. Contexto de League of Legends
+    - [2.1 Descripción del Juego](#21-descripción-general)
+    - [2.2 Relevancia de la Predicción de Partidas en LoL](#datos-en-league-of-legends)
+
+3. Datos en League of Legends
+    - [3.1 Base de Datos Utilizada](#31-base-de-datos-utilizada)
+    - [3.2 Descripción de las Variables](#32-descripción-de-las-variables)
+    - [3.3 Preprocesamiento de Datos](#33-preprocesamiento-de-datos)
+
+## Introducción y Contexto
+### 1.1 Contexto y Justificación del Análisis
+
+League of Legends, desarrollado por Riot Games, ha emergido como un fenómeno global en el ámbito de los deportes electrónicos. Este juego en línea de estrategia y acción ha experimentado un crecimiento meteórico, atrayendo a millones de jugadores y espectadores en todo el mundo. Con su base de usuarios que ha superado los 155 millones en 2021, League of Legends se ha convertido en una potencia indiscutible en la industria.
+
+El juego se centra en la estrategia y la colaboración en equipo, con cada campeón poseyendo roles y habilidades únicas. La acumulación de oro y experiencia durante las partidas permite a los jugadores mejorar y fortalecer a sus campeones, añadiendo capas de complejidad y toma de decisiones estratégicas.
+
+El crecimiento exponencial de League of Legends se refleja no solo en su base de jugadores, sino también en la audiencia de torneos de élite, como el Campeonato Mundial. Desde 2010, con aproximadamente 1 millón de usuarios conectados diariamente, hasta 2021, con más de 31 millones, el juego ha experimentado un aumento astronómico en la participación diaria.
+
+### 1.2 Objetivos del Análisis
+El propósito de este análisis es examinar detenidamente un conjunto de datos que comprende partidas clasificatorias Diamante de League of Legends en los primeros 10 minutos. Con alrededor de 10,000 partidas y jugadores de niveles similares, el objetivo es proporcionar información valiosa para equipos que buscan optimizar su rendimiento y estrategias en el juego.
+1. **Evaluar el Impacto de Estadísticas Clave**: Analizar en profundidad las estadísticas cruciales de las partidas clasificatorias Diamante en los primeros 10 minutos, como asesinatos, muertes, oro, experiencia, y nivel, para entender su relación con los resultados de las partidas.
+2. **Identificar Patrones y Tendencias**: Descubrir patrones y tendencias emergentes en los datos que puedan ofrecer información estratégica. Esto podría incluir correlaciones entre la colocación de objetos como Warding totems, el desempeño individual, y la ventaja económica, entre otros.
+3. **Desarrollar Insights Accionables**: Traducir los hallazgos del análisis en insights accionables para equipos de League of Legends. Estos insights podrían abordar tácticas específicas, roles críticos en la partida, o la importancia de ciertos objetivos, contribuyendo así a la mejora del rendimiento en partidas clasificatorias Diamante.
+
+### 1.3 Enfoque y Método a Seguir
+Para alcanzar nuestros objetivos, se utilizará un enfoque analítico de datos, explorando estadísticas específicas de las partidas clasificatorias Diamante. Este análisis proporcionará percepciones clave sobre patrones y tendencias que podrían influir en el resultado de las partidas.
+
+### 1.4 Planificación del Trabajo
+La planificación del proyecto incluirá tareas específicas, desde la adquisición y limpieza de datos hasta la implementación de modelos de machine learning. Un calendario detallado se establecerá para garantizar una ejecución eficiente y cumplir con los plazos establecidos.
+
+### 1.5 Breve Sumario de Productos Obtenidos
+Los resultados de este análisis proporcionarán información valiosa que puede utilizarse para mejorar el rendimiento y las estrategias de los equipos en las partidas clasificatorias Diamante de League of Legends.
+
+## Contexto de League of Legends
+### 2.1 Descripción General
+League of Legends (LoL), creado por Riot Games, es un juego en línea de estrategia y acción que ha dejado una marca indeleble en el mundo de los deportes electrónicos. Este fenómeno global atrae a jugadores de todo el mundo a competir en partidas altamente estratégicas y emocionantes.
 
 ![mapa](https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/LoL/2019/2019-How-to-improve-your-lol-predictions/Esports-Hero-Esports-How-to-improve-your-LoL-predictions.jpg)
 
-El juego se basa en la estrategia y la coordinación en equipo, ya que cada campeón tiene roles y habilidades específicas que deben utilizarse de manera efectiva. Los jugadores ganan oro y experiencia a lo largo de la partida, lo que les permite mejorar sus campeones y comprar objetos para fortalecer sus habilidades.
+El juego se desarrolla en un campo de batalla virtual donde dos equipos, cada uno conformado por cinco jugadores, compiten por la victoria. Cada jugador asume el papel de un "campeón", un personaje único con habilidades y roles específicos. La clave del éxito radica en la coordinación del equipo, la elección de estrategias efectivas y la adaptabilidad durante las partidas.
 
-Sin duda, la liga de League of Legends ha experimentado un notable crecimiento en los últimos años. Para dar una idea más precisa, veamos algunos datos concretos. En 2010, el juego tenía aproximadamente 5 millones de usuarios, y hoy en día, en 2021, ese número ha superado los 155 millones. Esto representa un crecimiento impresionante, con un incremento de más del 3100% en la base de usuarios en tan solo una década. Este crecimiento vertiginoso no se limita solo a la comunidad de jugadores, ya que los espectadores también han aumentado sustancialmente.
+![historial](/static/img/Historial.png)
 
-Los torneos de alto nivel, como el Campeonato Mundial de League of Legends, han sido testigos de un incremento constante en la audiencia. En 2010, apenas 1 millón de usuarios se conectaban diariamente para participar en partidas, y en 2021, esta cifra ha superado los 31 millones. Esto equivale a un aumento de más del 3000% en la cantidad de usuarios conectados diariamente durante este período. La creciente base de jugadores y espectadores ha convertido a League of Legends en un fenómeno global, atrayendo a fanáticos de todas partes del mundo.
+El crecimiento fenomenal de League of Legends se refleja en cifras impresionantes. Desde sus inicios en 2009, el juego ha experimentado un aumento espectacular en su base de usuarios, superando los 155 millones en 2021. Este crecimiento no se limita solo a jugadores, ya que los espectadores de torneos importantes también han aumentado significativamente.
 
-### Crecimiento de Usuarios de League of Legends
-Además , a medida que la escena competitiva ha crecido, también se ha vuelto más profesional. Grandes organizaciones y patrocinadores respaldan a equipos y jugadores, lo que demuestra la inversión y el compromiso que el juego ha generado en la industria de los deportes electrónicos. Este emocionante crecimiento y la perspectiva de seguir atrayendo a nuevos jugadores y fanáticos hacen de League of Legends un mercado prometedor y dinámico para cualquier inversor en busca de oportunidades en los deportes electrónicos
+## Datos en League of Legends
+### 3.1 Base de Datos Utilizada
+El análisis se basa en un conjunto de datos recopilados de partidas clasificatorias Diamante de League of Legends. Estos datos proporcionan una instantánea de las estadísticas clave durante los primeros 10 minutos de cada partida, permitiendo una exploración detallada de los factores que influyen en la victoria o derrota del equipo azul.
 
-El crecimiento fenomenal de League of Legends no solo se ha manifestado en números, sino también en la dedicación apasionada de su comunidad de jugadores. Como hemos observado, millones de usuarios se conectan diariamente, y esta base activa de jugadores ha demostrado un compromiso inquebrantable con el juego. Participan activamente en foros de discusión, utilizan redes sociales para compartir estrategias y experiencias, y se sumergen en plataformas de transmisión en vivo para aprender y entretenerse. Además, la formación de clanes y equipos amateur ha impulsado la competencia a niveles locales y regionales, creando una vibrante escena competitiva en todo el mundo. Esta comunidad apasionada y comprometida es un testimonio de la influencia duradera de League of Legends en el mundo de los deportes electrónicos.
+El conjunto de datos utilizado en este proyecto proviene de Kaggle, una reconocida plataforma para compartir conjuntos de datos y participar en desafíos de ciencia de datos. El dataset específico, titulado "League of Legends Diamond Ranked Games (10 min)", fue creado y compartido por el autor YI LAN MA.
 
+### 3.2 Descripción de las Variables
+El conjunto de datos contiene diversas variables que capturan diferentes aspectos del desempeño de los equipos. A continuación, se presenta una breve descripción de algunas de las variables más relevantes:
+- **Wins**: Número de victorias del equipo azul (1 si ganó, 0 si perdió).
+- **WardsPlaced**: Cantidad de "Warding totems" colocados por el equipo.
+- **Kills**: Número de asesinatos realizados por el equipo.
+- **TowersDestroyed**: Torres destruidas por el equipo.
+- **Dragons**: Número de dragones asegurados por el equipo.
+- **Heralds**: Número de Herald asegurados por el equipo.
+- **TotalGold**: Oro total obtenido por el equipo en los primeros 10 minutos.
+- **ExperienceDiff**: Diferencia total de experiencia entre el equipo y el equipo contrario.
 
----
+Esta es solo una selección de variables; el conjunto de datos completo abarca diversas métricas que proporcionan una visión completa del rendimiento de los equipos en la fase inicial de la partida.
 
-### Objetivos del análisis:
-El presente informe tiene como objetivo analizar un conjunto de datos de partidas clasificatorias Diamante de League of Legends (LoL) en los primeros 10 minutos, con el propósito de proporcionar información valiosa para un nuevo equipo que busca optimizar su rendimiento y estrategias. El dataset contiene estadísticas de aproximadamente 10,000 partidas con jugadores de niveles similares. El valor objetivo a predecir es si el equipo azul ganó la partida (valor 1) o no (valor 0).
+### 3.3 Preprocesamiento de Datos ([Data Wranging](/notebooks/000_Wranging.ipynb))
+Antes de realizar el análisis exploratorio, se llevó a cabo un proceso de preprocesamiento de datos para garantizar la calidad y coherencia de la información. Este proceso incluyó:
+- **Manejo de Datos Faltantes**: Verificación y tratamiento de cualquier dato faltante para evitar sesgos en el análisis.
+- **Normalización de Variables**: Ajuste de escalas para variables que podrían tener magnitudes diferentes.
+- **Codificación de Variables Categóricas**: Convertir variables categóricas en un formato adecuado para el análisis. 
 
-Referncias:
-- https://www.redbull.com/ar-es/lol-el-sistema-de-ranking-de-league-of-legends-explicado
-- https://tips.gg/es/lol/teams/
+![correlacion](/static/img/correlacion_total.png)
+( ver el notebook [005_Features](/notebooks/005_Features.ipynb) )
 
----
+## Herramientas y Métodos de Machine Learning en LoL
+En el entorno competitivo de League of Legends, donde la estrategia y la coordinación son esenciales, la aplicación de herramientas y métodos de machine learning se presenta como un recurso valioso para optimizar el rendimiento de los equipos. Este análisis detallado se enfoca en la selección y aplicación de diversas técnicas de machine learning para examinar partidas clasificatorias Diamante en los primeros 10 minutos del juego.
+### 4.1 Selección de Modelos
+#### 4.1.1 KNN:
 
-### EDA ([Notebook](notebooks/001_EDA.ipynb))
+#### 4.1.2 PCA:
 
----
-### Insight encontrados ([Notebook](notebooks/002_Insight.ipynb))
+#### 4.1.3 Random Forest:
+Los bosques aleatorios son útiles para problemas de clasificación y ofrecen una visión transparente de la importancia relativa de diversas variables en la toma de decisiones. Pueden ser empleados para predecir resultados en base a la combinación de múltiples árboles de decisión.
 
-- **Control temprano del mapa**: El hecho de que equipos que colocan más "Warding totems", obtienen más asesinatos y torres tengan una mayor probabilidad de victoria resalta la importancia de la visión del mapa y las estrategias de emboscada para obtener ventajas iniciales.
+#### 4.1.4 Redes Neuronales:
+Las redes neuronales, especialmente en la forma de modelos de aprendizaje profundo, son aptas para capturar patrones complejos en conjuntos de datos extensos. En el contexto de League of Legends, pueden ser eficaces para descubrir relaciones no lineales entre múltiples variables.
 
-![insight_001](static/img/Insight_001.png)
+### 4.2 Construcción y Entrenamiento de Modelos
+La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de parámetros. En este contexto:
 
+Preprocesamiento de Datos: La normalización de variables, manejo de valores atípicos y codificación de variables categóricas son pasos esenciales.
 
-- **Importancia de los objetivos neutrales**: La correlación entre asegurar más dragones y Herald en los primeros 10 minutos y una mayor tasa de victoria enfatiza la necesidad de coordinar y priorizar la captura de objetivos neutrales para obtener beneficios significativos para todo el equipo.
+Entrenamiento del Modelo: Se realizará utilizando conjuntos de entrenamiento y validación, y se ajustarán parámetros para mejorar el rendimiento del modelo.
 
-![insight_001](static/img/Insight_002.png)
+### 4.3 Métricas de Evaluación de Modelos
+#### 4.3.1 Precisión, Sensibilidad, Especificidad:
+Estas métricas evalúan el rendimiento de los modelos en términos de la capacidad para prever victorias y derrotas. La precisión mide la proporción de predicciones correctas en general, mientras que sensibilidad y especificidad se centran en la capacidad del modelo para identificar verdaderos positivos y verdaderos negativos, respectivamente.
 
-- **Desempeño individual y ventaja económica**: El número de asistencias y las diferencias de oro y experiencia entre los equipos como indicadores cruciales de la probabilidad de victoria destacan la importancia del desempeño individual y la ventaja económica para el éxito del equipo.
+#### 4.3.2 Curva ROC:
+La Curva ROC proporciona una representación visual de la sensibilidad frente a la tasa de falsos positivos en diferentes umbrales de clasificación, ofreciendo información valiosa sobre el rendimiento del modelo en distintos escenarios.
 
-![insight_001](static/img/Insight_003.png)
-
-- **Nivel promedio del equipo**: La correlación entre un mayor nivel promedio del equipo azul y una mayor probabilidad de ganar subraya la importancia de mantener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.ntener un ritmo de crecimiento constante y eficiente durante la fase temprana del juego.
-
-![insight_001](static/img/Insight_004.png)
-
-- **Diferencias de oro y experiencia determinantes**: La fuerte vinculación entre las diferencias de oro y experiencia entre los equipos en los primeros 10 minutos y los resultados resalta la relevancia de obtener una ventaja significativa en estos aspectos.
-
-![insight_001](static/img/Insight_005.png)
-
----
-
-### Hipotesis ([Notebook](notebooks/003_Outsight.ipynb))
-Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la probabilidad de victoria en el juego.
-
-- **Hipótesis 1**: Relación entre asesinatos y tasa de victoria
-El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de asesinatos, más alta será la probabilidad de ganar.
-
-![insight_001](static/img/Hypothesis_001.png)
-
-
-- **Hipótesis 2**: Impacto de objetivos neutrales en la victoria
-Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios significativos para todo el equipo.
-
-  ![insight_002A](static/img/Hypothesis_002A.png)
-
-  La relación entre la captura del Dragon y la cantidad total de experiencia y oro en el juego:
-  Para el equipo que captura el Dragon (Dragon si [D1]):
-  - La cantidad promedio de experiencia total obtenida es de aproximadamente 18,235.37.
-  - La cantidad promedio de oro total obtenida es de aproximadamente 16,841.97.
-
-  Para el equipo que no captura el Dragon (Dragon no [D0]):
-  - La cantidad promedio de experiencia total obtenida es ligeramente menor, con un valor promedio de aproximadamente 17,761.14.
-  - La cantidad promedio de oro total obtenida también es menor, con un valor promedio de aproximadamente 16,277.49.
-
-   ![insight_002B](static/img/Hypothesis_002B.png)
-
-   Para el equipo que captura el Herald (Herald si [H1]):
-
-  - La cantidad promedio de experiencia total obtenida es de aproximadamente 18,328.27.
-  - La cantidad promedio de oro total obtenida es de aproximadamente 17,000.59.
-
-  Para el equipo que no captura el Herald (Herald no [H0]):
-  - La cantidad promedio de experiencia total obtenida es ligeramente menor, con un valor promedio de aproximadamente 17,864.16.
-  - La cantidad promedio de oro total obtenida también es menor, con un valor promedio de aproximadamente 16,390.00.
-
-   En general, los equipos que capturan tanto el Dragon como el Herald tienden a obtener una mayor cantidad de experiencia y oro en comparación con los equipos que no capturan estos objetivos. La captura de objetivos neutrales (Dragon y Herald) en el juego está relacionada con una ventaja significativa en términos de recursos (experiencia y oro) para el equipo que los asegura. Estos valores son promedios y pueden variar según la estrategia y otros factores del juego.
-
-  podemos resumir la relación entre la captura de Dragones y Herald y la factibilidad de la victoria de la siguiente manera:
-
-  ![insight_002C](static/img/Hypothesis_002.png)
-
-  - Cuando un equipo no captura ni Dragon ni Herald, la probabilidad de victoria es del 40.52%.
-  - Cuando un equipo captura Dragon pero no Herald, la probabilidad de victoria es del 38.50%.
-  - Cuando un equipo no captura Dragon pero captura Herald, la probabilidad de victoria es del 10.43%.
-  - Cuando un equipo captura tanto Dragon como Herald, la probabilidad de victoria es del 10.56%.
-
-  Basándonos en estos datos, podemos observar que la probabilidad de victoria es más alta cuando un equipo captura al menos uno de estos objetivos neutrales (Dragon o Herald) en comparación con cuando no captura ninguno. Esto sugiere que la captura de estos objetivos neutrales está relacionada con una mayor factibilidad de la victoria en las partidas de League of Legends. La probabilidad de victoria es especialmente alta cuando se capturan ambos objetivos.
-
-
-- **Hipótesis 3**: Importancia de la ventaja económica y de experiencia
-Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.
-
-   ![insight_003](static/img/Hypothesis_003.png)
-
-- **Hipótesis 4**: Contribución individual y tasa de victoria Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en la tasa de victoria de su equipo en las partidas clasificatorias Diamante.
-
-  ![insight_004](static/img/Hypothesis_004.png)
-
-  los jugadores que contribuyen con un mayor número de asistencias tienen una mayor probabilidad de obtener la victoria en este nivel de juego. Este resultado sugiere que el juego en equipo y la contribución individual son factores importantes para el éxito en las partidas de Diamante en League of Legends.
-
-- **Hipótesis 5**: Nivel promedio y probabilidad de victoria Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá una mayor probabilidad de ganar la partida.
-
-  ![insight_005](static/img/Hypothesis_005.png)
-
-  El resultado obtenido de 69.43k de nivel promedio en partidas victoriosas y 67.29k de nivel promedio en partidas derrotadas indica que, en promedio, no hay una gran diferencia en el nivel promedio de los jugadores entre las partidas ganadas y las partidas perdidas.
-
-  Esto sugiere que, al menos en el contexto de las partidas analizadas, el nivel promedio de los jugadores en los primeros 10 minutos no parece ser un factor determinante para la tasa de victoria en League of Legends. La diferencia en el nivel promedio entre partidas ganadas y perdidas es relativamente pequeña, lo que sugiere que otros factores pueden tener un impacto más significativo en el resultado de la partida.
+### 4.4 Consideraciones Específicas para Modelos en Juegos
+Los juegos, como League of Legends, presentan desafíos únicos para la aplicación de modelos de machine learning:
+- **Interpretación de Resultados**: La interpretación de los resultados de los modelos debe ser accesible para los jugadores y entrenadores, lo que implica traducir las predicciones en estrategias tangibles.
+- **Adaptabilidad**: Dado que el metajuego de League of Legends evoluciona constantemente, los modelos deben ser adaptables para capturar nuevas tendencias y estrategias.
+- **Combinación con Conocimiento del Juego**: La integración de la experiencia y conocimientos de los jugadores profesionales puede mejorar la efectividad de los modelos al considerar aspectos estratégicos específicos del juego.

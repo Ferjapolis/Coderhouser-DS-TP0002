@@ -89,10 +89,8 @@ En el entorno competitivo de League of Legends, donde la estrategia y la coordin
 #### 4.1.2 PCA:
 
 #### 4.1.3 Random Forest:
-Los bosques aleatorios son útiles para problemas de clasificación y ofrecen una visión transparente de la importancia relativa de diversas variables en la toma de decisiones. Pueden ser empleados para predecir resultados en base a la combinación de múltiples árboles de decisión.
 
 #### 4.1.4 Redes Neuronales:
-Las redes neuronales, especialmente en la forma de modelos de aprendizaje profundo, son aptas para capturar patrones complejos en conjuntos de datos extensos. En el contexto de League of Legends, pueden ser eficaces para descubrir relaciones no lineales entre múltiples variables.
 
 ### 4.2 Construcción y Entrenamiento de Modelos
 La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de parámetros. En este contexto:

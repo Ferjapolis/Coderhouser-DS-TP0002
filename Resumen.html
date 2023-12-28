@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <v-navigation-drawer app permanent v-model="drawer">
+        <v-list dense>
+          <v-subheader>Indice</v-subheader>
+          <v-list-item-group>
+            <v-list-item dense v-for="(item, t) in items" :key="t">
+              <v-list-item-content v-if="item.tipo === 'title'" @click="scrollTo(item.href)">
+                <v-list-item-title>{{ item.name }}</v-list-item-title>
+              </v-list-item-content>
+              <v-list-item-content v-else @click="scrollTo(item.href)">
+                <v-list-item-subtitle>{{ item.name }}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+
+
+      </v-navigation-drawer>
+      <v-app-bar app>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+        <v-toolbar-title>League of Legends</v-toolbar-title>
+      </v-app-bar>
+      <v-main>
+        <v-container>
+          <v-row>
+            <v-col cols="11">
+              <v-row>
+                <v-col cols="11">
+                  <h2 id="introduccion">Introducción y Contexto</h2>
+                  <h3 id="sub1-1">1.1 Contexto y Justificación del Análisis</h3>
+                  <p>
+                    League of Legends, desarrollado por Riot Games, ha emergido como un fenómeno global en el
+                    ámbito de los deportes electrónicos. Este juego en línea de estrategia y acción ha
+                    experimentado un crecimiento meteórico, atrayendo a millones de jugadores y espectadores en
+                    todo el mundo. Con su base de usuarios que ha superado los 155 millones en 2021, League of
+                    Legends se ha convertido en una potencia indiscutible en la industria.
+
+                  </p>
+                  <p>
+                    El juego se centra en la estrategia y la colaboración en equipo, con cada campeón poseyendo
+                    roles y habilidades únicas. La acumulación de oro y experiencia durante las partidas permite
+                    a los jugadores mejorar y fortalecer a sus campeones, añadiendo capas de complejidad y toma
+                    de decisiones estratégicas.
+                  </p>
+                  <p>
+                    El crecimiento exponencial de League of Legends se refleja no solo en su base de jugadores,
+                    sino también en la audiencia de torneos de élite, como el Campeonato Mundial. Desde 2010,
+                    con aproximadamente 1 millón de usuarios conectados diariamente, hasta 2021, con más de 31
+                    millones, el juego ha experimentado un aumento astronómico en la participación diaria.
+                  </p>
+                  <h3 id="sub1-2">1.2 Objetivos del Análisis</h3>
+                  <p>
+                    El propósito de este análisis es examinar detenidamente un conjunto de datos que comprende
+                    partidas clasificatorias Diamante de League of Legends en los primeros 10 minutos. Con
+                    alrededor de 10,000 partidas y jugadores de niveles similares, el objetivo es proporcionar
+                    información valiosa para equipos que buscan optimizar su rendimiento y estrategias en el
+                    juego.
+
+                  </p>
+                  1. **Evaluar el Impacto de Estadísticas Clave**: Analizar en profundidad las estadísticas
+                  cruciales de las partidas clasificatorias Diamante en los primeros 10 minutos, como
+                  asesinatos, muertes, oro, experiencia, y nivel, para entender su relación con los resultados
+                  de las partidas.
+                  2. **Identificar Patrones y Tendencias**: Descubrir patrones y tendencias emergentes en los
+                  datos que puedan ofrecer información estratégica. Esto podría incluir correlaciones entre la
+                  colocación de objetos como Warding totems, el desempeño individual, y la ventaja económica,
+                  entre otros.
+                  3. **Desarrollar Insights Accionables**: Traducir los hallazgos del análisis en insights
+                  accionables para equipos de League of Legends. Estos insights podrían abordar tácticas
+                  específicas, roles críticos en la partida, o la importancia de ciertos objetivos,
+                  contribuyendo así a la mejora del rendimiento en partidas clasificatorias Diamante.
+                  <h3 id="sub1-3">1.3 Enfoque y Método a Seguir</h3>
+                  <p>
+                    Para alcanzar nuestros objetivos, se utilizará un enfoque analítico de datos, explorando
+                    estadísticas específicas de las partidas clasificatorias Diamante. Este análisis
+                    proporcionará percepciones clave sobre patrones y tendencias que podrían influir en el
+                    resultado de las partidas.
+                  </p>
+
+                  <h3 id="sub1-4">1.4 Planificación del Trabajo</h3>
+                  <p>
+                    La planificación del proyecto incluirá tareas específicas, desde la adquisición y limpieza
+                    de datos hasta la implementación de modelos de machine learning. Un calendario detallado se
+                    establecerá para garantizar una ejecución eficiente y cumplir con los plazos establecidos.
+                  </p>
+
+                  <h3 id="sub1-5">1.5 Breve Sumario de Productos Obtenidos</h3>
+                  <p>
+                    Los resultados de este análisis proporcionarán información valiosa que puede utilizarse para
+                    mejorar el rendimiento y las estrategias de los equipos en las partidas clasificatorias
+                    Diamante de League of Legends.
+                  </p>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="11">
+                  <h2 id="contexto">Contexto de League of Legends</h2>
+                  <h3 id="sub2-1">2.1 Descripción General</h3>
+                  <p>
+                    League of Legends (LoL), creado por Riot Games, es un juego en línea de estrategia y acción
+                    que ha dejado una marca indeleble en el mundo de los deportes electrónicos. Este fenómeno
+                    global atrae a jugadores de todo el mundo a competir en partidas altamente estratégicas y
+                    emocionantes.
+                  </p>
+
+                  <v-img
+                    src="https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/LoL/2019/2019-How-to-improve-your-lol-predictions/Esports-Hero-Esports-How-to-improve-your-LoL-predictions.jpg"></v-img>
+                  <p>
+                    El juego se desarrolla en un campo de batalla virtual donde dos equipos, cada uno conformado
+                    por cinco jugadores, compiten por la victoria. Cada jugador asume el papel de un "campeón",
+                    un personaje único con habilidades y roles específicos. La clave del éxito radica en la
+                    coordinación del equipo, la elección de estrategias efectivas y la adaptabilidad durante las
+                    partidas.
+                  </p>
+                  <iframe width="600" height="600" src="C:\develoment\Coderhouser-DS-TP0002\static\html\Historial.html"
+                    frameborder="0"></iframe>
+                  <p>
+                    El crecimiento fenomenal de League of Legends se refleja en cifras impresionantes. Desde sus
+                    inicios en 2009, el juego ha experimentado un aumento espectacular en su base de usuarios,
+                    superando los 155 millones en 2021. Este crecimiento no se limita solo a jugadores, ya que
+                    los espectadores de torneos importantes también han aumentado significativamente.
+                  </p>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="11">
+                  <h2 id="datos">Datos en League of Legends</h2>
+                  <h3 id="sub3-1">3.1 Base de Datos Utilizada</h3>
+                  <p>
+                    El análisis se basa en un conjunto de datos recopilados de partidas clasificatorias Diamante
+                    de League of Legends. Estos datos proporcionan una instantánea de las estadísticas clave
+                    durante los primeros 10 minutos de cada partida, permitiendo una exploración detallada de
+                    los factores que influyen en la victoria o derrota del equipo azul.
+                  </p>
+                  <p>
+                    El conjunto de datos utilizado en este proyecto proviene de Kaggle, una reconocida
+                    plataforma para compartir conjuntos de datos y participar en desafíos de ciencia de datos.
+                    El dataset específico, titulado "League of Legends Diamond Ranked Games (10 min)", fue
+                    creado y compartido por el autor YI LAN MA.
+                  </p>
+                  <h3 id="sub3-2">3.2 Descripción de las Variables</h3>
+                  <p>
+                    El conjunto de datos contiene diversas variables que capturan diferentes aspectos del
+                    desempeño de los equipos. A continuación, se presenta una breve descripción de algunas de
+                    las variables más relevantes:
+                  </p>
+                  <ul>
+                    <li><strong>Wins:</strong> Número de victorias del equipo azul (1 si ganó, 0 si perdió).</li>
+                    <li><strong>WardsPlaced:</strong> Cantidad de "Warding totems" colocados por el equipo.</li>
+                    <li><strong>Kills:</strong> Número de asesinatos realizados por el equipo.</li>
+                    <li><strong>TowersDestroyed:</strong> Torres destruidas por el equipo.</li>
+                    <li><strong>Dragons:</strong> Número de dragones asegurados por el equipo.</li>
+                    <li><strong>Heralds:</strong> Número de Herald asegurados por el equipo.</li>
+                    <li><strong>TotalGold:</strong> Oro total obtenido por el equipo en los primeros 10 minutos.</li>
+                    <li><strong>ExperienceDiff:</strong> Diferencia total de experiencia entre el equipo y el equipo
+                      contrario.</li>
+                  </ul>
+                  <p>
+                    Esta es solo una selección de variables; el conjunto de datos completo abarca diversas
+                    métricas que proporcionan una visión completa del rendimiento de los equipos en la fase
+                    inicial de la partida.
+                  </p>
+
+                  <h3 id="sub3-3">3.3 Preprocesamiento de Datos</h3>
+                  <p>
+                    Antes de realizar el análisis exploratorio, se llevó a cabo un proceso de preprocesamiento
+                    de datos para garantizar la calidad y coherencia de la información. Este proceso incluyó:
+                  </p>
+                  <ul>
+                    <li><strong>Manejo de Datos Faltantes:</strong> Verificación y tratamiento de cualquier dato
+                      faltante para evitar sesgos en el análisis.</li>
+                    <li><strong>Normalización de Variables:</strong> Ajuste de escalas para variables que podrían tener
+                      magnitudes diferentes.</li>
+                    <li><strong>Codificación de Variables Categóricas:</strong> Convertir variables categóricas en un
+                      formato adecuado para el análisis.</li>
+                  </ul>
+
+
+                  <iframe width="950" height="950"
+                    src="C:\develoment\Coderhouser-DS-TP0002\static\html\correlacion_total.html"
+                    frameborder="0"></iframe>
+
+                  <h3 id="sub3-4">3.4 Optimización y Características en el Análisis Estratégico</h3>
+                  <p>
+                    La elección de conjuntos de características en feature engineering es clave para alinearlos
+                    con objetivos específicos y conocimiento del juego. Integrar múltiples aspectos del juego
+                    mejora la capacidad del modelo para capturar interacciones complejas entre variables. Esta
+                    estrategia no solo mejora el rendimiento del modelo, sino que también fortalece la
+                    interpretación de resultados al considerar diversas dimensiones del rendimiento y estrategia
+                    del equipo. La sinergia entre la elección cuidadosa de features y el entendimiento del
+                    contexto del juego es crucial para construir modelos más robustos y contextualmente
+                    relevantes.
+                  </p>
+                  <v-row>
+                    <v-col>
+                      <h4>Conjunto de Características de Visión:</h4>
+                      <ol>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>WardsPlaced</li>
+                            <li>WardsDestroyed</li>
+                            <li>EliteMonsters</li>
+                            <li>Dragons</li>
+                            <li>Heralds</li>
+                            <li>TowersDestroyed</li>
+                          </ul>
+                        </li>
+                        <li><strong>Importancia:</strong>
+                          <ul>
+                            <li>Proporciona información sobre el control del equipo en el mapa.</li>
+                            <li>Puede influir en estrategias de rotación y control de objetivos.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <h4>Conjunto de Características de Rendimiento en Combate:</h4>
+                      <ol>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>FirstBlood</li>
+                            <li>Kills</li>
+                            <li>Deaths</li>
+                            <li>Assists</li>
+                            <li>TotalGold</li>
+                            <li>GoldDiff</li>
+                            <li>ExperienceDiff</li>
+                            <li>CSPerMin</li>
+                            <li>GoldPerMin</li>
+                          </ul>
+                        </li>
+                        <li><strong>Importancia:</strong>
+                          <ul>
+                            <li>Refleja el desempeño individual y colectivo en combate.</li>
+                            <li>Puede influir en la acumulación de recursos y ventajas para el equipo.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <h4>Conjunto de Características de Desarrollo y Experiencia:</h4>
+                      <ol>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>AvgLevel</li>
+                            <li>TotalExperience</li>
+                            <li>TotalMinionsKilled</li>
+                            <li>TotalJungleMinionsKilled</li>
+                          </ul>
+                        </li>
+                        <li><strong>Importancia:</strong>
+                          <ul>
+                            <li>Muestra el crecimiento y desarrollo de los campeones del equipo.</li>
+                            <li>Puede influir en la capacidad del equipo para enfrentar desafíos más avanzados.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <h4>Conjunto de Características de Combate Temprano:</h4>
+                      <ol>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>FirstBlood</li>
+                            <li>Kills</li>
+                            <li>Deaths</li>
+                            <li>Assists</li>
+                            <li>WardsPlaced</li>
+                            <li>WardsDestroyed</li>
+                          </ul>
+                        </li>
+                        <li><strong>Importancia:</strong>
+                          <ul>
+                            <li>Se centra en eventos tempranos que podrían influir en el curso del juego.</li>
+                            <li>Puede revelar estrategias y decisiones cruciales en las etapas iniciales.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <h4>Conjunto de Características Económicas:</h4>
+                      <ol>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>TotalGold</li>
+                            <li>GoldPerMin</li>
+                            <li>GoldDiff</li>
+                          </ul>
+                        </li>
+                        <li><strong>Importancia:</strong>
+                          <ul>
+                            <li>Evalúa la capacidad del equipo para acumular recursos económicos.</li>
+                            <li>Puede reflejar ventajas económicas y desventajas durante el juego.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col>
+                      <h4>Conjunto de Características de Desempeño en Dragones y Heralds:</h4>
+                      <ol>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>Dragons</li>
+                            <li>Heralds</li>
+                            <li>GoldDiff</li>
+                            <li>ExperienceDiff</li>
+                          </ul>
+                        </li>
+                        <li><strong>Importancia:</strong>
+                          <ul>
+                            <li>Evalúa el éxito en la captura de objetivos importantes.</li>
+                            <li>Puede influir en la ventaja estratégica y táctica del equipo.</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="11">
+                  <h2>Herramientas y Métodos de Machine Learning en LoL</h2>
+                  <p>
+                    En el entorno competitivo de League of Legends, donde la estrategia y la coordinación son
+                    esenciales, la aplicación de herramientas y métodos de machine learning se presenta como un
+                    recurso valioso para optimizar el rendimiento de los equipos. Este análisis detallado se
+                    enfoca en la selección y aplicación de diversas técnicas de machine learning para examinar
+                    partidas clasificatorias Diamante en los primeros 10 minutos del juego.
+                  </p>
+
+                  <h3>4.1 Selección de Modelos <a href="/models/">( Ver )</a></h3>
+                  <h4>4.1.1 KNN <a href="/models/KNN/">( Ver )</a>:</h4>
+                  <p>
+                    En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando
+                    diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en
+                    Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada
+                    modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices
+                    de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró
+                    una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una
+                    variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este
+                    análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas
+                    de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de
+                    consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de
+                    errores.
+                  </p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Modelo</th>
+                        <th>Features Set</th>
+                        <th>Max Accuracy</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Modelo 1</td>
+                        <td>Visión</td>
+                        <td><strong>57.99%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 2</td>
+                        <td>Rendimiento en Combate</td>
+                        <td><strong>71.20%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 3</td>
+                        <td>Desarrollo y Experiencia</td>
+                        <td><strong>65.18%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 4</td>
+                        <td>Combate Temprano</td>
+                        <td><strong>68.67%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 5</td>
+                        <td>Económicas</td>
+                        <td><strong>70.44%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 6</td>
+                        <td>Desempeño en Dragones y Heralds</td>
+                        <td><strong>71.45%</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <iframe width="600" height="600"
+                    src="C:\develoment\Coderhouser-DS-TP0002\static\html\knn_Matrices_confusión.html"
+                    frameborder="0"></iframe>
+
+                  <h4>4.1.2 Random Forest <a href="/models/Random_Forest/">( Ver )</a>:</h4>
+                  <p>
+                    En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con
+                    conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones
+                    y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación
+                    detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable
+                    éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos
+                    Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los
+                    objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la
+                    exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
+                  </p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Modelo</th>
+                        <th>Features Set</th>
+                        <th>Max Accuracy</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Modelo 1</td>
+                        <td>Visión</td>
+                        <td><strong>58.90%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 2</td>
+                        <td>Rendimiento en Combate</td>
+                        <td><strong>71.66%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 3</td>
+                        <td>Desarrollo y Experiencia</td>
+                        <td><strong>63.87%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 4</td>
+                        <td>Combate Temprano</td>
+                        <td><strong>69.48%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 5</td>
+                        <td>Económicas</td>
+                        <td><strong>71.71%</strong></td>
+                      </tr>
+                      <tr>
+                        <td>Modelo 6</td>
+                        <td>Desempeño en Dragones y Heralds</td>
+                        <td><strong>72.27%</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <iframe width="600" height="600"
+                    src="C:\develoment\Coderhouser-DS-TP0002\static\html\rf_Matrices_confusión.html"
+                    frameborder="0"></iframe>
+
+                  <h4>4.1.3 :</h4>
+                  <h4>4.1.4 Redes Neuronales:</h4>
+
+                  <h3>4.2 Construcción y Entrenamiento de Modelos</h3>
+                  La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de
+                  parámetros. En este contexto:
+
+                  Preprocesamiento de Datos: La normalización de variables, manejo de valores atípicos y
+                  codificación de variables categóricas son pasos esenciales.
+
+                  Entrenamiento del Modelo: Se realizará utilizando conjuntos de entrenamiento y validación, y
+                  se ajustarán parámetros para mejorar el rendimiento del modelo.
+
+                  <h3>4.3 Métricas de Evaluación de Modelos</h3>
+                  <h4>4.3.1 Precisión, Sensibilidad, Especificidad:</h4>
+                  Estas métricas evalúan el rendimiento de los modelos en términos de la capacidad para prever
+                  victorias y derrotas. La precisión mide la proporción de predicciones correctas en general,
+                  mientras que sensibilidad y especificidad se centran en la capacidad del modelo para
+                  identificar verdaderos positivos y verdaderos negativos, respectivamente.
+
+                  <h4>4.3.2 Curva ROC:</h4>
+                  La Curva ROC proporciona una representación visual de la sensibilidad frente a la tasa de
+                  falsos positivos en diferentes umbrales de clasificación, ofreciendo información valiosa
+                  sobre el rendimiento del modelo en distintos escenarios.
+
+                  <h3>4.4 Consideraciones Específicas para Modelos en Juegos</h3>
+                  Los juegos, como League of Legends, presentan desafíos únicos para la aplicación de modelos
+                  de machine learning:
+                  - **Interpretación de Resultados**: La interpretación de los resultados de los modelos debe
+                  ser accesible para los jugadores y entrenadores, lo que implica traducir las predicciones en
+                  estrategias tangibles.
+                  - **Adaptabilidad**: Dado que el metajuego de League of Legends evoluciona constantemente,
+                  los modelos deben ser adaptables para capturar nuevas tendencias y estrategias.
+                  - **Combinación con Conocimiento del Juego**: La integración de la experiencia y
+                  conocimientos de los jugadores profesionales puede mejorar la efectividad de los modelos al
+                  considerar aspectos estratégicos específicos del juego.
+
+                </v-col>
+              </v-row>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ({
+        drawer: true,
+        items: [
+          { name: 'Introducción', tipo: "title", href: "introduccion" },
+          { name: '1.1 Contexto y Justificación del Trabajo', tipo: "subtitle", href: "sub1-1" },
+          { name: '1.2 Objetivos del Análisis', tipo: "subtitle", href: "sub1-2" },
+          { name: '1.3 Enfoque y Método a Seguir', tipo: "subtitle", href: "sub1-3" },
+          { name: '1.4 Planificación del Trabajo', tipo: "subtitle", href: "sub1-4" },
+          { name: '1.5 Breve Sumario de Productos Obtenidos', tipo: "subtitle", href: "sub1-5" },
+          { name: '2. Contexto de League of Legends', tipo: "title", href: "contexto" },
+          { name: '2.1 Descripción General', tipo: "subtitle", href: "sub2-1" },
+          { name: '2.2 Relevancia de la Predicción de Partidas en LoL', tipo: "subtitle", href: "sub2-2" },
+          { name: '3. Datos en League of Legends', tipo: "title", href: "datos" },
+          { name: '3.1 Base de Datos Utilizada', tipo: "subtitle", href: "sub3-1" },
+          { name: '3.2 Descripción de las Variables', tipo: "subtitle", href: "sub3-2" },
+          { name: '3.3 Preprocesamiento de Datos', tipo: "subtitle", href: "sub3-3" },
+          { name: '3.4 Optimización y Características en el Análisis Estratégico', tipo: "subtitle", href: "sub3-4" },
+        ]
+      }),
+      methods: {
+        kebabCase(text) {
+          return text.toLowerCase().replace(/ /g, '-');
+        },
+        scrollTo(item) {
+    document.getElementById(item).scrollIntoView()
+  }
+      },
+    })
+  </script>
+  <style>
+    table {
+      width: 90%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      width: 33.33%;
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+  </style>
+</body>
+
+</html>

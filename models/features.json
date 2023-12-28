@@ -452,7 +452,8 @@
                 "Heralds",
                 "TowersDestroyed"
             ],
-            "KNN": 57.99595141700404
+            "KNN": 57.99595141700404,
+            "RF": 0.5890688259109311
         },
         {
             "nombre": "Conjunto de Caracter\u00edsticas de Rendimiento en Combate",
@@ -467,7 +468,8 @@
                 "CSPerMin",
                 "GoldPerMin"
             ],
-            "KNN": 71.20445344129554
+            "KNN": 71.20445344129554,
+            "RF": 0.7165991902834008
         },
         {
             "nombre": "Conjunto de Caracter\u00edsticas de Desarrollo y Experiencia",
@@ -477,7 +479,8 @@
                 "TotalMinionsKilled",
                 "TotalJungleMinionsKilled"
             ],
-            "KNN": 65.18218623481782
+            "KNN": 65.18218623481782,
+            "RF": 0.638663967611336
         },
         {
             "nombre": "Conjunto de Caracter\u00edsticas de Combate Temprano",
@@ -489,7 +492,8 @@
                 "WardsPlaced",
                 "WardsDestroyed"
             ],
-            "KNN": 68.67408906882592
+            "KNN": 68.67408906882592,
+            "RF": 0.694838056680162
         },
         {
             "nombre": "Conjunto de Caracter\u00edsticas Econ\u00f3micas",
@@ -498,7 +502,8 @@
                 "GoldPerMin",
                 "GoldDiff"
             ],
-            "KNN": 70.44534412955466
+            "KNN": 70.44534412955466,
+            "RF": 0.7171052631578947
         },
         {
             "nombre": "Conjunto de Caracter\u00edsticas de Desempe\u00f1o en Dragones y Heralds",
@@ -508,7 +513,8 @@
                 "GoldDiff",
                 "ExperienceDiff"
             ],
-            "KNN": 71.45748987854252
+            "KNN": 71.45748987854252,
+            "RF": 0.7226720647773279
         }
     ]
 }

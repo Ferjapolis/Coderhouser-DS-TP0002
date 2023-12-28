@@ -9,37 +9,15 @@ proceso de implementación de diferentes modelos en tu conjunto de datos de Leag
 
 ## Pruebas de modelos:
 
-### KNN [( Notebook )](/models/KNN/modelado.ipynb)
-- **Precisión**: 71.81%
+### KNN [( Notebook )](/models/KNN)
+- **Precisión**: 71.45%
 - **Ventajas**: Simple, adapta a datos cambiantes
 - **Desventajas**: Sensible a la elección de K
-![knn_prediccion](../static/img/knn_precision.png)
+![knn_prediccion](../static/img/knn_Matrices_confusión.png)
 
-### PCA [( Notebook )](/models/PCA/modelado.ipynb)
-- **Precisión**: 72%
-- **Ventajas**: Interpretable, fácil de implementar.
-- **Desventajas**: Limitado a problemas binarios.
-![knn_prediccion](../static/img/knn_precision.png)
-
-### Random Forest [( Notebook )](/models/Random_Forest/modelado.ipynb)
-- **Precisión**: 78.38%
+### Random Forest [( Notebook )](/models/Random_Forest)
+- **Precisión**: 72.27%
 - **Ventajas**: Reducción del sobreajuste, alta precisión
 - **Desventajas**: Mayor complejidad
-![knn_prediccion](../static/img/rf_prediccion.png)
-
-### Árbol de Decisión
-- **Precisión**: 75%
-- **Ventajas**: Fácil de entender, puede manejar datos no lineales.
-- **Desventajas**: Propenso al sobreajuste.
-
-### Bosques Aleatorios
-- **Precisión**: 100%
-- **Ventajas**: Reducción del sobreajuste, alta precisión.
-- **Desventajas**: Mayor complejidad.
-
-
-### Máquinas de Soporte Vectorial (SVM)
-- **Precisión**: 78%
-- **Ventajas**: Buen rendimiento en datos no lineales.
-- **Desventajas**: Sensible a hiperparámetros.
+![knn_prediccion](../static/img/rf_Matrices_confusión.png)
 

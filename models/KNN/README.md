@@ -1,5 +1,5 @@
 # Modelo KNN
-Esta sección aborda los resultados de la construcción de modelos KNN utilizando conjuntos de características y estrategias establecidas según el análisis obtenido.
+Esta sección aborda los resultados de la construcción de modelos KNN utilizando conjuntos de características y estrategias establecidas según el análisis obtenido en Features Engineering ( [Notebook](/notebooks/005_Features.ipynb) ).
 
 ## Desempeño por Conjunto de Features
 Los modelos KNN fueron entrenados sobre varios conjuntos de features, y se evaluó su rendimiento en términos de máxima precisión (Max Accuracy) alcanzada en cada conjunto. A continuación, se presentan los resultados en la siguiente tabla:

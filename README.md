@@ -16,6 +16,7 @@
     - [3.1 Base de Datos Utilizada](#31-base-de-datos-utilizada)
     - [3.2 Descripción de las Variables](#32-descripción-de-las-variables)
     - [3.3 Preprocesamiento de Datos](#33-preprocesamiento-de-datos)
+    - [3.4 Optimización y Características en el Análisis Estratégico](#34-optimización-y-características-en-el-análisis-estratégico-feature-engineering)
 
 ## Introducción y Contexto
 ### 1.1 Contexto y Justificación del Análisis
@@ -81,14 +82,109 @@ Antes de realizar el análisis exploratorio, se llevó a cabo un proceso de prep
 ![correlacion](/static/img/correlacion_total.png)
 ( ver el notebook [005_Features](/notebooks/005_Features.ipynb) )
 
+### 3.4 Optimización y Características en el Análisis Estratégico ([Feature Engineering](/notebooks/005_Features.ipynb))
+La elección de conjuntos de características en feature engineering es clave para alinearlos con objetivos específicos y conocimiento del juego. Integrar múltiples aspectos del juego mejora la capacidad del modelo para capturar interacciones complejas entre variables. Esta estrategia no solo mejora el rendimiento del modelo, sino que también fortalece la interpretación de resultados al considerar diversas dimensiones del rendimiento y estrategia del equipo. La sinergia entre la elección cuidadosa de features y el entendimiento del contexto del juego es crucial para construir modelos más robustos y contextualmente relevantes.
+
+#### Conjunto de Características de Visión:
+1. **Features**:
+    - WardsPlaced
+    - WardsDestroyed
+    - EliteMonsters
+    - Dragons
+    - Heralds
+    - TowersDestroyed
+2. **Importancia**:
+    - Proporciona información sobre el control del equipo en el mapa.
+    - Puede influir en estrategias de rotación y control de objetivos.
+
+#### Conjunto de Características de Rendimiento en Combate:
+1. **Features**:
+    - FirstBlood
+    - Kills
+    - Deaths
+    - Assists
+    - TotalGold
+    - GoldDiff
+    - ExperienceDiff
+    - CSPerMin
+    - GoldPerMin
+2. **Importancia**:
+    - Refleja el desempeño individual y colectivo en combate.
+    - Puede influir en la acumulación de recursos y ventajas para el equipo.
+
+#### Conjunto de Características de Desarrollo y Experiencia:
+1. **Features**:
+    - AvgLevel
+    - TotalExperience
+    - TotalMinionsKilled
+    - TotalJungleMinionsKilled
+2. **Importancia**:
+    - Muestra el crecimiento y desarrollo de los campeones del equipo.
+    - Puede influir en la capacidad del equipo para enfrentar desafíos más avanzados.
+
+#### Conjunto de Características de Combate Temprano:
+1. **Features**:
+    - FirstBlood
+    - Kills
+    - Deaths
+    - Assists
+    - WardsPlaced
+    - WardsDestroyed
+2. **Importancia**:
+    - Se centra en eventos tempranos que podrían influir en el curso del juego.
+    - Puede revelar estrategias y decisiones cruciales en las etapas iniciales.
+
+#### Conjunto de Características Económicas:
+1. **Features**:
+    - TotalGold
+    - GoldPerMin
+    - GoldDiff
+2. **Importancia**:
+    - Evalúa la capacidad del equipo para acumular recursos económicos.
+    - Puede reflejar ventajas económicas y desventajas durante el juego.
+
+#### Conjunto de Características de Desempeño en Dragones y Heralds:
+1. **Features**:
+    - Dragons
+    - Heralds
+    - GoldDiff
+    - ExperienceDiff
+2. **Importancia**:
+    - Evalúa el éxito en la captura de objetivos importantes.
+    - Puede influir en la ventaja estratégica y táctica del equipo.
+
 ## Herramientas y Métodos de Machine Learning en LoL
 En el entorno competitivo de League of Legends, donde la estrategia y la coordinación son esenciales, la aplicación de herramientas y métodos de machine learning se presenta como un recurso valioso para optimizar el rendimiento de los equipos. Este análisis detallado se enfoca en la selección y aplicación de diversas técnicas de machine learning para examinar partidas clasificatorias Diamante en los primeros 10 minutos del juego.
-### 4.1 Selección de Modelos
-#### 4.1.1 KNN:
+### 4.1 Selección de Modelos ( [Ver](/models/) )
+#### 4.1.1 KNN ( [Ver](/models/KNN/) ):
+En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de errores.
+| Modelo | Features Set | Max Accuracy |
+|---|---|---|
+| Modelo 1 | Visión | **57.99%** |
+| Modelo 2 | Rendimiento en Combate | **71.20%** |
+| Modelo 3 | Desarrollo y Experiencia | **65.18%** |
+| Modelo 4 | Combate Temprano | **68.67%** |
+| Modelo 5 | Económicas | **70.44%** |
+| Modelo 6 | Desempeño en Dragones y Heralds | **71.45%** |
 
-#### 4.1.2 PCA:
+![grafico_mejora](/static/img/knn_Matrices_confusión.png)
 
-#### 4.1.3 Random Forest:
+#### 4.1.2 Random Forest ( [Ver](/models/Random_Forest/) ):
+
+En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
+
+| Modelo | Features Set | Max Accuracy |
+|---|---|---|
+| Modelo 1 | Visión | **58.90%** |
+| Modelo 2 | Rendimiento en Combate | **71.66%** |
+| Modelo 3 | Desarrollo y Experiencia | **63.87%** |
+| Modelo 4 | Combate Temprano | **69.48%** |
+| Modelo 5 | Económicas | **71.71%** |
+| Modelo 6 | Desempeño en Dragones y Heralds | **72.27%** |
+
+![grafico_mejora](/static/img/rf_Matrices_confusión.png)
+
+#### 4.1.3 :
 
 #### 4.1.4 Redes Neuronales:
 

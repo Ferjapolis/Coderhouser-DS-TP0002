@@ -73,16 +73,16 @@ El conjunto de datos contiene diversas variables que capturan diferentes aspecto
 
 Esta es solo una selección de variables; el conjunto de datos completo abarca diversas métricas que proporcionan una visión completa del rendimiento de los equipos en la fase inicial de la partida.
 
-### 3.3 Preprocesamiento de Datos ([Data Wranging](/notebooks/000_Wranging.ipynb))
+### 3.3 Preprocesamiento de Datos ([Notebook](/notebooks/000_Wranging.ipynb))
 Antes de realizar el análisis exploratorio, se llevó a cabo un proceso de preprocesamiento de datos para garantizar la calidad y coherencia de la información. Este proceso incluyó:
 - **Manejo de Datos Faltantes**: Verificación y tratamiento de cualquier dato faltante para evitar sesgos en el análisis.
 - **Normalización de Variables**: Ajuste de escalas para variables que podrían tener magnitudes diferentes.
 - **Codificación de Variables Categóricas**: Convertir variables categóricas en un formato adecuado para el análisis. 
 
 ![correlacion](/static/img/correlacion_total.png)
-( ver el notebook [005_Features](/notebooks/005_Features.ipynb) )
 
-### 3.4 Optimización y Características en el Análisis Estratégico ([Feature Engineering](/notebooks/005_Features.ipynb))
+
+### 3.4 Optimización y Características en el Análisis Estratégico ([Notebook](/notebooks/005_Features.ipynb))
 La elección de conjuntos de características en feature engineering es clave para alinearlos con objetivos específicos y conocimiento del juego. Integrar múltiples aspectos del juego mejora la capacidad del modelo para capturar interacciones complejas entre variables. Esta estrategia no solo mejora el rendimiento del modelo, sino que también fortalece la interpretación de resultados al considerar diversas dimensiones del rendimiento y estrategia del equipo. La sinergia entre la elección cuidadosa de features y el entendimiento del contexto del juego es crucial para construir modelos más robustos y contextualmente relevantes.
 
 #### Conjunto de Características de Visión:
@@ -153,57 +153,103 @@ La elección de conjuntos de características en feature engineering es clave pa
     - Evalúa el éxito en la captura de objetivos importantes.
     - Puede influir en la ventaja estratégica y táctica del equipo.
 
+### 3.5 Hipótesis ([Notebook](/notebooks/004_Hypothesis.ipynb))
+Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la probabilidad de victoria en el juego.
+
+1. **Hipótesis 1**: Relación entre asesinatos y tasa de victoria?
+    
+    **Resultado**: El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de asesinatos, más alta será la probabilidad de ganar.
+
+    ![Hypothesis_001](/static/img/Hypothesis_001.png)
+
+2. **Hipótesis 2**: Impacto de objetivos neutrales en la victoria? 
+   
+    **Resultados**: Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios significativos para todo el equipo.
+
+    ![Hypothesis_002A](/static/img/Hypothesis_002A.png)
+    ![Hypothesis_002B](/static/img/Hypothesis_002B.png)
+
+3. **Hipótesis 3**: Importancia de la ventaja económica y de experiencia??
+    
+    **Resultado**: Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.
+
+    ![Hypothesis_003](/static/img/Hypothesis_003.png)
+
+    Tabla descriptiva:
+    | | GoldDiff | ExperienceDiff |	GoldDiff | ExperienceDiff |
+    |---|---|---|---|---|
+    | count | 9879 | 9879 | 9879 | 9879 |
+    | mean | 1253 | 940 | -1253 | -940 |
+    | std | 2108 | 1674 | 2108 | 1674 |
+    | min | -6744 | -5355 | -11467 | -9333 |
+    | 25% | -154 | -182 | -2574 | -2012 |
+    | 50% | 1182 | 899 | -1182 | -899 |
+    | 75% |2574 | 2012 | 154 | 182 |
+    | max | 11467 | 9333 | 6744 | 5355 |
+
+4. **Hipótesis 4**: Contribución individual y tasa de victoria?
+
+    **Resultado**: Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en la tasa de victoria de su equipo en las partidas clasificatorias Diamante.
+    ![Hypothesis_004](/static/img/Hypothesis_004.png)
+
+5. **Hipótesis 5**: Nivel promedio y probabilidad de victoria?
+
+    **Resultado**: Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá una leve probabilidad de ganar la partida.
+    ![Hypothesis_005](/static/img/Hypothesis_005.png)
+
+
 ## Herramientas y Métodos de Machine Learning en LoL
 En el entorno competitivo de League of Legends, donde la estrategia y la coordinación son esenciales, la aplicación de herramientas y métodos de machine learning se presenta como un recurso valioso para optimizar el rendimiento de los equipos. Este análisis detallado se enfoca en la selección y aplicación de diversas técnicas de machine learning para examinar partidas clasificatorias Diamante en los primeros 10 minutos del juego.
+
+
 ### 4.1 Selección de Modelos ( [Ver](/models/) )
-#### 4.1.1 KNN ( [Ver](/models/KNN/) ):
-En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de errores.
-| Modelo | Features Set | Max Accuracy |
-|---|---|---|
-| Modelo 1 | Visión | **57.99%** |
-| Modelo 2 | Rendimiento en Combate | **71.20%** |
-| Modelo 3 | Desarrollo y Experiencia | **65.18%** |
-| Modelo 4 | Combate Temprano | **68.67%** |
-| Modelo 5 | Económicas | **70.44%** |
-| Modelo 6 | Desempeño en Dragones y Heralds | **71.45%** |
 
-![grafico_mejora](/static/img/knn_Matrices_confusión.png)
+En el proceso de evaluación y predicción del resultado de partidas clasificatorias en League of Legends, se han aplicado tres modelos de aprendizaje automático: KNN, Random Forest y Decision Tree. Cada modelo fue entrenado y evaluado con seis conjuntos distintos de características, permitiendo así una exhaustiva exploración de los factores que impactan en la victoria o derrota del equipo azul. A continuación, se presentan los resultados destacados de cada modelo junto con el conjunto de características que maximizó su precisión:
 
-#### 4.1.2 Random Forest ( [Ver](/models/Random_Forest/) ):
+| Modelo | Features Set | KNN Accuracy | Random Forest Accuracy | Decision Tree Accuracy |
+|---|---|---|---|---|
+| Modelo 1 | Visión | 57.99% | 58.90% | 57.34% |
+| Modelo 2 | Rendimiento en Combate | 71.20% | 71.66% | 69.69% |
+| Modelo 3 | Desarrollo y Experiencia | 65.18% | 63.87% | 62.04% |
+| Modelo 4 | Combate Temprano | 68.67% | 69.48% | 67.91% |
+| Modelo 5 | Económicas | 70.44% | 71.71% | 69.38% |
+| Modelo 6 | Desempeño en Dragones y Heralds | 71.45% | 72.27% | 71.00% |
 
-En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
 
-| Modelo | Features Set | Max Accuracy |
-|---|---|---|
-| Modelo 1 | Visión | **58.90%** |
-| Modelo 2 | Rendimiento en Combate | **71.66%** |
-| Modelo 3 | Desarrollo y Experiencia | **63.87%** |
-| Modelo 4 | Combate Temprano | **69.48%** |
-| Modelo 5 | Económicas | **71.71%** |
-| Modelo 6 | Desempeño en Dragones y Heralds | **72.27%** |
 
-![grafico_mejora](/static/img/rf_Matrices_confusión.png)
-
-#### 4.1.3 :
-
-#### 4.1.4 Redes Neuronales:
 
 ### 4.2 Construcción y Entrenamiento de Modelos
 La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de parámetros. En este contexto:
 
-Preprocesamiento de Datos: La normalización de variables, manejo de valores atípicos y codificación de variables categóricas son pasos esenciales.
+Para la construcción de los modelos, importamos los conjuntos de datos procesados a partir del conjunto de datos original. Utilizamos los datos del Team Blue para el entrenamiento y los del Team Red para la validación. Posteriormente, importamos el diccionario feature.json, que contiene los arreglos de columnas específicos para cada modelo, junto con otras características relevantes.
 
-Entrenamiento del Modelo: Se realizará utilizando conjuntos de entrenamiento y validación, y se ajustarán parámetros para mejorar el rendimiento del modelo.
+Para cada conjunto de características, procedemos a construir un modelo correspondiente. Numeramos y almacenamos estos modelos para llevar a cabo las validaciones pertinentes posteriormente.
+
+![proceso](/static/img/proceso.png)
+
+En este ejemplo, observamos cómo el uso de cada conjunto de características estimadas influye en la evolución de los modelos, como se ilustra específicamente en el caso del algoritmo KNN.
+
+![grafico_mejora](/static/img/knn_features_comparations.png)
 
 ### 4.3 Métricas de Evaluación de Modelos
 #### 4.3.1 Precisión, Sensibilidad, Especificidad:
 Estas métricas evalúan el rendimiento de los modelos en términos de la capacidad para prever victorias y derrotas. La precisión mide la proporción de predicciones correctas en general, mientras que sensibilidad y especificidad se centran en la capacidad del modelo para identificar verdaderos positivos y verdaderos negativos, respectivamente.
 
-#### 4.3.2 Curva ROC:
-La Curva ROC proporciona una representación visual de la sensibilidad frente a la tasa de falsos positivos en diferentes umbrales de clasificación, ofreciendo información valiosa sobre el rendimiento del modelo en distintos escenarios.
+#### 4.3.2 KNN ( [Ver](/models/KNN/) ):
+En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de errores.
 
-### 4.4 Consideraciones Específicas para Modelos en Juegos
-Los juegos, como League of Legends, presentan desafíos únicos para la aplicación de modelos de machine learning:
-- **Interpretación de Resultados**: La interpretación de los resultados de los modelos debe ser accesible para los jugadores y entrenadores, lo que implica traducir las predicciones en estrategias tangibles.
-- **Adaptabilidad**: Dado que el metajuego de League of Legends evoluciona constantemente, los modelos deben ser adaptables para capturar nuevas tendencias y estrategias.
-- **Combinación con Conocimiento del Juego**: La integración de la experiencia y conocimientos de los jugadores profesionales puede mejorar la efectividad de los modelos al considerar aspectos estratégicos específicos del juego.
+![grafico_mejora](/static/img/knn_Matrices_confusión.png)
+![grafico_mejora](/static/img/knn_curve_roc.png)
+
+#### 4.3.3 Random Forest ( [Ver](/models/Random_Forest/) ):
+
+En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
+
+![grafico_mejora](/static/img/rf_Matrices_confusión.png)
+![grafico_mejora](/static/img/rf_curve_roc.png)
+
+#### 4.3.4 Decision Tree ( [Ver](/models/Decision_Tree/) ):
+Los modelos, entrenados con diversos conjuntos, exhibieron máximas precisiones, destacando el Modelo 6 con "Desempeño en Dragones y Heralds" logrando un 71.00%. La evaluación del rendimiento mediante matrices de confusión reveló variaciones notables en los patrones de error para cada modelo y conjunto de características, proporcionando una visión detallada de su desempeño.
+
+![grafico_mejora](/static/img/df_Matrices_confusión.png)
+![grafico_mejora](/static/img/df_curve_roc.png)

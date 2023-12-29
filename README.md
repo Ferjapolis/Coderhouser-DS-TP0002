@@ -169,7 +169,7 @@ Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis
     ![Hypothesis_002A](/static/img/Hypothesis_002A.png)
     ![Hypothesis_002B](/static/img/Hypothesis_002B.png)
 
-3. **Hipótesis 3**: Importancia de la ventaja económica y de experiencia??
+3. **Hipótesis 3**: Importancia de la ventaja económica y de experiencia?
     
     **Resultado**: Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.
 

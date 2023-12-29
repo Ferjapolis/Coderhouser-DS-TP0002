@@ -253,3 +253,5 @@ Los modelos, entrenados con diversos conjuntos, exhibieron máximas precisiones,
 
 ![grafico_mejora](/static/img/df_Matrices_confusión.png)
 ![grafico_mejora](/static/img/df_curve_roc.png)
+
+## Resumen de analisis

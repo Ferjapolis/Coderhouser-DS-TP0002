@@ -446,7 +446,7 @@
                     frameborder="0"></iframe>
                   <h5>Tabla descriptiva:</h5>
                   <v-data-table dense :headers="headersHypt" :items="hipotesis" item-key="name" class="elevation-0"
-                    hide-default-footer items-per-page="-1"></v-data-table>
+                    hide-default-footer></v-data-table>
                 </v-col>
               </v-row>
               <v-row>
@@ -505,7 +505,7 @@
               <v-row>
                 <v-col class="pb-8">
                   <v-data-table dense :headers="headers" :items="modelos" item-key="name" class="elevation-0"
-                    hide-default-footer items-per-page="6"></v-data-table>
+                    hide-default-footer></v-data-table>
                 </v-col>
               </v-row>
               <h3 id="sub4-2">4.2 Construcción y Entrenamiento de Modelos</h3>
@@ -901,6 +901,7 @@
         ]
       }),
       mounted() {
+        this.loadMoreItems();
         window.addEventListener('scroll', this.handleScroll);
       },
       methods: {
@@ -921,7 +922,7 @@
               this.cierre = true;
             }
           }
-        }
+        },
       },
     })
   </script>

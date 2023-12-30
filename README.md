@@ -229,7 +229,7 @@ Para cada conjunto de características, procedemos a construir un modelo corresp
 
 En este ejemplo, observamos cómo el uso de cada conjunto de características estimadas influye en la evolución de los modelos, como se ilustra específicamente en el caso del algoritmo KNN.
 
-![grafico_mejora](/static/img/knn_features_comparations.png)
+![knn_features_comparations](/static/img/knn_features_comparations.png)
 
 ### 4.3 Métricas de Evaluación de Modelos
 #### 4.3.1 Precisión, Sensibilidad, Especificidad:
@@ -238,20 +238,30 @@ Estas métricas evalúan el rendimiento de los modelos en términos de la capaci
 #### 4.3.2 KNN ( [Ver](/models/KNN/) ):
 En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de errores.
 
-![grafico_mejora](/static/img/knn_Matrices_confusión.png)
-![grafico_mejora](/static/img/knn_curve_roc.png)
+![knn_Matrices_confusión](/static/img/knn_Matrices_confusión.png)
+![knn_curve_roc](/static/img/knn_curve_roc.png)
 
 #### 4.3.3 Random Forest ( [Ver](/models/Random_Forest/) ):
 
 En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
 
-![grafico_mejora](/static/img/rf_Matrices_confusión.png)
-![grafico_mejora](/static/img/rf_curve_roc.png)
+![rf_Matrices_confusión](/static/img/rf_Matrices_confusión.png)
+![rf_curve_roc](/static/img/rf_curve_roc.png)
 
 #### 4.3.4 Decision Tree ( [Ver](/models/Decision_Tree/) ):
 Los modelos, entrenados con diversos conjuntos, exhibieron máximas precisiones, destacando el Modelo 6 con "Desempeño en Dragones y Heralds" logrando un 71.00%. La evaluación del rendimiento mediante matrices de confusión reveló variaciones notables en los patrones de error para cada modelo y conjunto de características, proporcionando una visión detallada de su desempeño.
 
-![grafico_mejora](/static/img/df_Matrices_confusión.png)
-![grafico_mejora](/static/img/df_curve_roc.png)
+![df_Matrices_confusión](/static/img/df_Matrices_confusión.png)
+![df_curve_roc](/static/img/df_curve_roc.png)
 
 ## Resumen de analisis
+### 5.2 Unificación de Modelos para Mejor Rendimiento  ( [Notebook](/notebooks/006_Resumen.ipynb) )
+Después de obtener tres modelos distintos para cada combinación de características según las estrategias de juego, se avanzó hacia la unificación de estos modelos. Este proceso culminó en la creación de un algoritmo que estima la factibilidad de victoria basándose en los datos procesados por los modelos más efectivos. El resultado de esta síntesis se presenta de manera visual a través de un gráfico, proporcionando así una perspectiva consolidada sobre la probabilidad de éxito en función de las características seleccionadas. Este enfoque integrado busca maximizar la capacidad predictiva y facilitar una comprensión más completa de los factores que influyen en el desempeño en partidas clasificatorias de League of Legends.
+
+![estimacion_test](/static/img/estimacion_test.png)
+- Estimación de Porcentaje de Victoria según KNN: 16.67%
+- Estimación de Porcentaje de Victoria según Decision Tree: 50.0%
+- Estimación de Porcentaje de Victoria según Random Forest: 33.33%
+
+
+Aunque algunos modelos presentan un rendimiento inferior en comparación con otros, han demostrado su capacidad para identificar partidas que se desvían del estándar, incluyendo las notorias "remontadas épicas". Además, al considerar una estimación de victoria superior al 50%, se observa que el análisis es capaz de prever victorias con un 88% de precisión en base a los datos examinados. Este enfoque también proporciona insights valiosos al determinar qué estrategias de juego tienen el potencial de ser efectivas para asegurar la victoria en la partida. En conjunto, estos hallazgos resaltan la utilidad de los modelos, incluso aquellos con un rendimiento aparentemente inferior, al ofrecer una comprensión profunda y específica de situaciones de juego únicas.

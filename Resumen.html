@@ -36,21 +36,21 @@
         </v-app-bar>
         <v-container>
           <v-parallax dark src="https://ktla.com/wp-content/uploads/sites/4/2023/09/6516eb24ae0c37.87936500.jpeg?w=1280"
-          height="350">
-          <v-row align="center" justify="center">
-            <v-col class="text-center" cols="12">
-              <v-avatar tile size="80">
-                <img src="https://williamcardozo.github.io/projeto-final-cpw/images/logo.png" alt="poro">
-              </v-avatar>
-              <h1 class="text-h3 font-weight mb-4 orange--text">
-                PoroIA
-              </h1>
-              <h4 class="subheading">
-                La Clave para el Éxito en el Mundo de League of Legends
-              </h4>
-            </v-col>
-          </v-row>
-        </v-parallax>
+            height="350">
+            <v-row align="center" justify="center">
+              <v-col class="text-center" cols="12">
+                <v-avatar tile size="80">
+                  <img src="https://williamcardozo.github.io/projeto-final-cpw/images/logo.png" alt="poro">
+                </v-avatar>
+                <h1 class="text-h3 font-weight mb-4 orange--text">
+                  PoroIA
+                </h1>
+                <h2 class="subheading">
+                  La Clave para el Éxito en el Mundo de League of Legends
+                </h2>
+              </v-col>
+            </v-row>
+          </v-parallax>
           <v-row class="pt-8">
             <v-col cols="11">
               <v-row>
@@ -167,14 +167,19 @@
                     </v-col>
                     <v-col cols="5">
                       <p class="pt-10">
-                        El crecimiento fenomenal de League of Legends no solo se ha manifestado en números, sino también en
-                        la dedicación apasionada de su comunidad de jugadores. Como hemos observado, millones de usuarios se
-                        conectan diariamente, y esta base activa de jugadores ha demostrado un compromiso inquebrantable con
+                        El crecimiento fenomenal de League of Legends no solo se ha manifestado en números, sino también
+                        en
+                        la dedicación apasionada de su comunidad de jugadores. Como hemos observado, millones de
+                        usuarios se
+                        conectan diariamente, y esta base activa de jugadores ha demostrado un compromiso inquebrantable
+                        con
                         el juego. Participan activamente en foros de discusión, utilizan redes sociales para compartir
                         estrategias y experiencias, y se sumergen en plataformas de transmisión en vivo para aprender y
-                        entretenerse. Además, la formación de clanes y equipos amateur ha impulsado la competencia a niveles
+                        entretenerse. Además, la formación de clanes y equipos amateur ha impulsado la competencia a
+                        niveles
                         locales y regionales, creando una vibrante escena competitiva en todo el mundo. Esta comunidad
-                        apasionada y comprometida es un testimonio de la influencia duradera de League of Legends en el mundo
+                        apasionada y comprometida es un testimonio de la influencia duradera de League of Legends en el
+                        mundo
                         de los deportes electrónicos.
                       </p>
                     </v-col>
@@ -259,9 +264,8 @@
                         relevantes.
                       </p>
                     </v-col>
-                    <v-col cols="5">
-                      <v-img lazy-src="https://www.unrankedsmurfs.com/storage/blogposts/lol-terminology/strategy.jpg"
-                        src="https://www.unrankedsmurfs.com/storage/blogposts/lol-terminology/strategy.jpg"></v-img>
+                    <v-col cols="3">
+                      <v-img src="https://i.giphy.com/M1piXuMMzEMi5ySXFK.webp"></v-img>
                     </v-col>
 
                   </v-row>
@@ -400,11 +404,10 @@
                     </h3>
                     <p>
                       Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre
-                      el
-                      dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el
-                      equipo
-                      podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la
-                      probabilidad de victoria en el juego.
+                      el dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el
+                      equipo podrá obtener una mejor comprensión de los factores que realmente influyen en el
+                      rendimiento
+                      y la probabilidad de victoria en el juego.
                     </p>
                     <v-row>
                       <v-col cols="10">
@@ -490,22 +493,31 @@
                         partidas clasificatorias Diamante en los primeros 10 minutos del juego.
                       </p>
 
-                      <h3 id="sub4">4.1 Selección de Modelos <a
+                      <h3 id="sub4-1">4.1 Selección de Modelos <a
                           href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models">( Ver )</a></h3>
-                      <p>En el proceso de evaluación y predicción del resultado de partidas clasificatorias en League of
-                        Legends, se han aplicado tres modelos de aprendizaje automático: KNN, Random Forest y Decision
-                        Tree.
-                        Cada modelo fue entrenado y evaluado con seis conjuntos distintos de características,
-                        permitiendo
-                        así
-                        una exhaustiva exploración de los factores que impactan en la victoria o derrota del equipo
-                        azul. A
-                        continuación, se presentan los resultados destacados de cada modelo junto con el conjunto de
-                        características que maximizó su precisión:</p>
-                      <v-col cols="10">
-                        <v-data-table dense :headers="headers" :items="modelos" item-key="name" class="elevation-0"
-                          hide-default-footer items-per-page="-1"></v-data-table>
-                      </v-col>
+                      <v-row>
+                        <v-col cols="10">
+                          <p>En el proceso de evaluación y predicción del resultado de partidas clasificatorias en
+                            League of
+                            Legends, se han aplicado tres modelos de aprendizaje automático: KNN, Random Forest y
+                            Decision
+                            Tree. Cada modelo fue entrenado y evaluado con seis conjuntos distintos de características,
+                            permitiendo así una exhaustiva exploración de los factores que impactan en la victoria o
+                            derrota del equipo
+                            azul. A continuación, se presentan los resultados destacados de cada modelo junto con el
+                            conjunto de
+                            características que maximizó su precisión:</p>
+                        </v-col>
+                        <v-col cols="2">
+                          <v-img src="https://i.giphy.com/M51FEiXf0rhmSQekQN.webp"></v-img>
+                        </v-col>
+                      </v-row>
+                      <v-row>
+                        <v-col class="pb-8">
+                          <v-data-table dense :headers="headers" :items="modelos" item-key="name" class="elevation-0"
+                            hide-default-footer items-per-page="6"></v-data-table>
+                        </v-col>
+                      </v-row>
                       <h3 id="sub4-2">4.2 Construcción y Entrenamiento de Modelos</h3>
                       <p>
                         La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de
@@ -523,13 +535,14 @@
                         Numeramos y
                         almacenamos estos modelos para llevar a cabo las validaciones pertinentes posteriormente.
                       </p>
-                      <v-img src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/img/proceso.png"></v-img>
+                      <v-img width="700"
+                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/img/proceso.png"></v-img>
                       <p>
                         En este ejemplo, observamos cómo el uso de cada conjunto de características estimadas influye en
                         la
                         evolución de los modelos, como se ilustra específicamente en el caso del algoritmo KNN.
                       </p>
-                      <iframe width="600" height="600"
+                      <iframe width="800" height="500"
                         src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_features_comparations.html"
                         frameborder="0"></iframe>
 
@@ -612,7 +625,81 @@
                       </v-row>
                     </v-col>
                   </v-row>
+                  <v-row>
+                    <v-col cols="11">
+                      <h2 id="resumen">Resumen de analisis</h2>
 
+                      <h3 id="sub5-1">5.1 Unificación de Modelos para Mejor Rendimiento <a
+                          href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/006_Resumen.ipynb">(
+                          Ver )</a></h3>
+                      <p>
+                        Después de obtener tres modelos distintos para cada combinación de características según las
+                        estrategias de juego, se avanzó hacia la unificación de estos modelos. Este proceso culminó en
+                        la creación de un algoritmo que estima la factibilidad de victoria basándose en los datos
+                        procesados por los modelos más efectivos. El resultado de esta síntesis se presenta de manera
+                        visual a través de un gráfico, proporcionando así una perspectiva consolidada sobre la
+                        probabilidad de éxito en función de las características seleccionadas. Este enfoque integrado
+                        busca maximizar la capacidad predictiva y facilitar una comprensión más completa de los factores
+                        que influyen en el desempeño en partidas clasificatorias de League of Legends.
+                      </p>
+                      <iframe width="600" height="600"
+                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/estimacion_test.html"
+                        frameborder="0"></iframe>
+                      <ul>
+                        <li>Estimación de Porcentaje de Victoria según KNN: 16.67%</li>
+                        <li>Estimación de Porcentaje de Victoria según Decision Tree: 50.0%</li>
+                        <li>Estimación de Porcentaje de Victoria según Random Forest: 33.33%</li>
+                      </ul>
+
+                      <p>
+                        Aunque algunos modelos presentan un rendimiento inferior en comparación con otros, han
+                        demostrado su capacidad para identificar partidas que se desvían del estándar, incluyendo las
+                        notorias "remontadas épicas". Además, al considerar una estimación de victoria superior al 50%,
+                        se observa que el análisis es capaz de prever victorias con un 88% de precisión en base a los
+                        datos examinados. Este enfoque también proporciona insights valiosos al determinar qué
+                        estrategias de juego tienen el potencial de ser efectivas para asegurar la victoria en la
+                        partida. En conjunto, estos hallazgos resaltan la utilidad de los modelos, incluso aquellos con
+                        un rendimiento aparentemente inferior, al ofrecer una comprensión profunda y específica de
+                        situaciones de juego únicas.
+                      </p>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="11">
+                      <h2 id="proximamente">Próximos Pasos:</h2>
+                      <p>
+                        Con el sólido marco de modelos construido y evaluado, el siguiente paso crucial es implementar este
+                        esquema en tiempo real, transformándolo en una herramienta dinámica y poderosa para la toma de
+                        decisiones y la optimización de estrategias de equipo en partidas clasificatorias de League of
+                        Legends. Aquí se esbozan los pasos futuros:
+                      </p>
+                      <h3 id="sub5-1">5.1 Implementación en Tiempo Real:</h3>
+                      <p>
+                        Desarrollar una infraestructura que permita la integración de los modelos en tiempo real, asegurando
+                        una ejecución eficiente y rápida de las predicciones durante las partidas.
+                      </p>
+                      <h3 id="sub5-2">Monitoreo Continuo del Rendimiento:</h3>
+                      <p>
+                        Establecer un sistema de monitoreo continuo para evaluar la precisión y eficacia de los modelos en un
+                        entorno en tiempo real, permitiendo ajustes y mejoras conforme evolucionan las estrategias de juego.
+                      </p>
+                      <h3 id="sub5-3">Retroalimentación y Mejoras Iterativas:</h3>
+                      <p>
+                        Establecer un mecanismo de retroalimentación donde los usuarios puedan proporcionar comentarios sobre
+                        la eficacia de las recomendaciones, permitiendo iteraciones continuas y mejoras basadas en la
+                        experiencia del usuario.
+                      </p>
+                      <h3 id="sub5-4">Evaluación del Impacto en Estrategias de Equipo:</h3>
+                      <p>
+                        Realizar un análisis detallado del impacto de la herramienta en las estrategias de equipo y toma de
+                        decisiones, midiendo el rendimiento y la eficacia en situaciones de juego reales.
+                      </p>
+                      <p>
+                        La implementación exitosa de estos próximos pasos no solo transformará el esquema de modelos en una
+                        herramienta valiosa para la toma de decisiones en tiempo real, sino que también contribuirá al
+                        continuo desarrollo y refinamiento de estrategias de equipo en el competitivo entorno de League of
+                        Legends.
+                      </p>
                 </v-col>
               </v-row>
         </v-container>

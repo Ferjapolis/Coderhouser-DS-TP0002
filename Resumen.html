@@ -11,7 +11,7 @@
 <body>
   <div id="app">
     <v-app>
-      <v-navigation-drawer app v-model="drawer">
+      <v-navigation-drawer right temporary app v-model="indice">
         <v-list dense>
           <v-subheader>Indice</v-subheader>
           <v-list-item-group>
@@ -28,13 +28,30 @@
 
 
       </v-navigation-drawer>
-      <v-app-bar app>
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>League of Legends</v-toolbar-title>
-      </v-app-bar>
       <v-main>
+        <v-app-bar app>
+          <v-toolbar-title href="https://www.coderhouse.com/">CODERHOUSE</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn text @click.stop="indice = !indice">Indice</v-btn>
+        </v-app-bar>
         <v-container>
-          <v-row>
+          <v-parallax dark src="https://ktla.com/wp-content/uploads/sites/4/2023/09/6516eb24ae0c37.87936500.jpeg?w=1280"
+          height="350">
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <v-avatar tile size="80">
+                <img src="https://williamcardozo.github.io/projeto-final-cpw/images/logo.png" alt="poro">
+              </v-avatar>
+              <h1 class="text-h3 font-weight mb-4 orange--text">
+                PoroIA
+              </h1>
+              <h4 class="subheading">
+                La Clave para el Éxito en el Mundo de League of Legends
+              </h4>
+            </v-col>
+          </v-row>
+        </v-parallax>
+          <v-row class="pt-8">
             <v-col cols="11">
               <v-row>
                 <v-col cols="11">
@@ -139,15 +156,29 @@
                     coordinación del equipo, la elección de estrategias efectivas y la adaptabilidad durante las
                     partidas.
                   </p>
-                  <iframe width="600" height="500"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Historial.html"
-                    frameborder="0"></iframe>
-                  <p>
-                    El crecimiento fenomenal de League of Legends se refleja en cifras impresionantes. Desde sus
-                    inicios en 2009, el juego ha experimentado un aumento espectacular en su base de usuarios,
-                    superando los 155 millones en 2021. Este crecimiento no se limita solo a jugadores, ya que
-                    los espectadores de torneos importantes también han aumentado significativamente.
-                  </p>
+                  <h4>
+                    <a href="https://www.leagueoflegends.com/es-mx/how-to-play/">Aprender a jugar</a>
+                  </h4>
+                  <v-row>
+                    <v-col cols="7">
+                      <iframe width="600" height="500"
+                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Historial.html"
+                        frameborder="0"></iframe>
+                    </v-col>
+                    <v-col cols="5">
+                      <p class="pt-10">
+                        El crecimiento fenomenal de League of Legends no solo se ha manifestado en números, sino también en
+                        la dedicación apasionada de su comunidad de jugadores. Como hemos observado, millones de usuarios se
+                        conectan diariamente, y esta base activa de jugadores ha demostrado un compromiso inquebrantable con
+                        el juego. Participan activamente en foros de discusión, utilizan redes sociales para compartir
+                        estrategias y experiencias, y se sumergen en plataformas de transmisión en vivo para aprender y
+                        entretenerse. Además, la formación de clanes y equipos amateur ha impulsado la competencia a niveles
+                        locales y regionales, creando una vibrante escena competitiva en todo el mundo. Esta comunidad
+                        apasionada y comprometida es un testimonio de la influencia duradera de League of Legends en el mundo
+                        de los deportes electrónicos.
+                      </p>
+                    </v-col>
+                  </v-row>
                 </v-col>
               </v-row>
               <v-row>
@@ -189,8 +220,9 @@
                     inicial de la partida.
                   </p>
 
-                  <h3 id="sub3-3">3.3 Preprocesamiento de Datos<a href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/000_Wranging.ipynb">(
-                    Notebook )</a></h3>
+                  <h3 id="sub3-3">3.3 Preprocesamiento de Datos<a
+                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/000_Wranging.ipynb">(
+                      Notebook )</a></h3>
                   <p>
                     Antes de realizar el análisis exploratorio, se llevó a cabo un proceso de preprocesamiento
                     de datos para garantizar la calidad y coherencia de la información. Este proceso incluyó:
@@ -210,19 +242,29 @@
                     frameborder="0"></iframe>
 
                   <h3 id="sub3-4">3.4 Optimización y Características en el Análisis Estratégico
-                    <a href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/005_Features.ipynb">(
+                    <a
+                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/005_Features.ipynb">(
                       Notebook )</a>
                   </h3>
-                  <p>
-                    La elección de conjuntos de características en feature engineering es clave para alinearlos
-                    con objetivos específicos y conocimiento del juego. Integrar múltiples aspectos del juego
-                    mejora la capacidad del modelo para capturar interacciones complejas entre variables. Esta
-                    estrategia no solo mejora el rendimiento del modelo, sino que también fortalece la
-                    interpretación de resultados al considerar diversas dimensiones del rendimiento y estrategia
-                    del equipo. La sinergia entre la elección cuidadosa de features y el entendimiento del
-                    contexto del juego es crucial para construir modelos más robustos y contextualmente
-                    relevantes.
-                  </p>
+                  <v-row class="pt-4">
+                    <v-col cols="7">
+                      <p>
+                        La elección de conjuntos de características en feature engineering es clave para alinearlos
+                        con objetivos específicos y conocimiento del juego. Integrar múltiples aspectos del juego
+                        mejora la capacidad del modelo para capturar interacciones complejas entre variables. Esta
+                        estrategia no solo mejora el rendimiento del modelo, sino que también fortalece la
+                        interpretación de resultados al considerar diversas dimensiones del rendimiento y estrategia
+                        del equipo. La sinergia entre la elección cuidadosa de features y el entendimiento del
+                        contexto del juego es crucial para construir modelos más robustos y contextualmente
+                        relevantes.
+                      </p>
+                    </v-col>
+                    <v-col cols="5">
+                      <v-img lazy-src="https://www.unrankedsmurfs.com/storage/blogposts/lol-terminology/strategy.jpg"
+                        src="https://www.unrankedsmurfs.com/storage/blogposts/lol-terminology/strategy.jpg"></v-img>
+                    </v-col>
+
+                  </v-row>
                   <v-row>
                     <v-col>
                       <h4>Conjunto de Características de Visión:</h4>
@@ -245,8 +287,6 @@
                         </li>
                       </ol>
                     </v-col>
-                  </v-row>
-                  <v-row>
                     <v-col>
                       <h4>Conjunto de Características de Rendimiento en Combate:</h4>
                       <ol>
@@ -292,8 +332,6 @@
                         </li>
                       </ol>
                     </v-col>
-                  </v-row>
-                  <v-row>
                     <v-col>
                       <h4>Conjunto de Características de Combate Temprano:</h4>
                       <ol>
@@ -335,8 +373,6 @@
                         </li>
                       </ol>
                     </v-col>
-                  </v-row>
-                  <v-row>
                     <v-col>
                       <h4>Conjunto de Características de Desempeño en Dragones y Heralds:</h4>
                       <ol>
@@ -357,209 +393,228 @@
                       </ol>
                     </v-col>
                   </v-row>
-                  <h3 id="sub3-5">3.5 Hipótesis <a
-                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/004_Hypothesis.ipynb">(
-                      Notebook )</a></h3>
-                  </h3>
-                  <p>
-                    Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre
-                    el
-                    dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el
-                    equipo
-                    podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la
-                    probabilidad de victoria en el juego.
-                  </p>
-                  <v-row><v-col cols="10">
-                      <h4>Hipótesis 1</h4>
-                      <p>¿Relación entre asesinatos y tasa de victoria?</p>
-                      <h4>Resultado</h4>
-                      <p>El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se
-                        correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de
-                        asesinatos, más
-                        alta será la probabilidad de ganar.</p>
-                      <iframe width="600" height="400"
-                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_001.html"
-                        frameborder="0"></iframe>
-                    </v-col></v-row>
-                  <v-row><v-col cols="10">
-                      <h4>Hipótesis 2</h4>
-                      <p>¿Impacto de objetivos neutrales en la victoria?</p>
-                      <h4>Resultado</h4>
-                      <p>Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor
-                        probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios significativos
-                        para todo el equipo.</p>
+                  <v-row>
+                    <h3 id="sub3-5">3.5 Hipótesis <a
+                        href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/004_Hypothesis.ipynb">(
+                        Notebook )</a></h3>
+                    </h3>
+                    <p>
+                      Estas hipótesis proporcionan una base sólida para realizar pruebas y análisis más detallados sobre
+                      el
+                      dataset de League of Legends. Al evaluar cada una de estas hipótesis y validarlas con datos, el
+                      equipo
+                      podrá obtener una mejor comprensión de los factores que realmente influyen en el rendimiento y la
+                      probabilidad de victoria en el juego.
+                    </p>
+                    <v-row>
+                      <v-col cols="10">
+                        <h4>Hipótesis 1</h4>
+                        <p>¿Relación entre asesinatos y tasa de victoria?</p>
+                        <h4>Resultado</h4>
+                        <p>El número de asesinatos conseguidos por un equipo en los primeros 10 minutos se
+                          correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de
+                          asesinatos, más
+                          alta será la probabilidad de ganar.</p>
+                        <iframe width="600" height="400"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_001.html"
+                          frameborder="0"></iframe>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="10">
+                        <h4>Hipótesis 2</h4>
+                        <p>¿Impacto de objetivos neutrales en la victoria?</p>
+                        <h4>Resultado</h4>
+                        <p>Equipos que aseguran más dragones y Herald durante los primeros 10 minutos tendrán una mayor
+                          probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios
+                          significativos
+                          para todo el equipo.</p>
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002A.html"
+                          frameborder="0"></iframe>
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002B.html"
+                          frameborder="0"></iframe>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="10">
+                        <h4>Hipótesis 3</h4>
+                        <p>¿Importancia de la ventaja económica y de experiencia?</p>
+                        <h4>Resultado</h4>
+                        <p>Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario
+                          en
+                          los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.</p>
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_003.html"
+                          frameborder="0"></iframe>
+                        <h5>Tabla descriptiva:</h5>
+                        <v-data-table dense :headers="headersHypt" :items="hipotesis" item-key="name"
+                          class="elevation-0" hide-default-footer items-per-page="-1"></v-data-table>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="10">
+                        <h4>Hipótesis 4</h4>
+                        <p>¿Contribución individual y tasa de victoria?</p>
+                        <h4>Resultado</h4>
+                        <p>Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en
+                          la
+                          tasa de victoria de su equipo en las partidas clasificatorias Diamante.</p>
+                        <iframe width="600" height="300"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_004.html"
+                          frameborder="0"></iframe>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col cols="10">
+                        <h4>Hipótesis 1</h4>
+                        <p>¿Nivel promedio y probabilidad de victoria?</p>
+                        <h4>Resultado</h4>
+                        <p>Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá
+                          una leve probabilidad de ganar la partida.</p>
+                        <iframe width="600" height="300"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_005.html"
+                          frameborder="0"></iframe>
+                      </v-col>
+                    </v-row>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="11">
+                      <h2 id="modelos">Herramientas y Métodos de Machine Learning en LoL</h2>
+                      <p>
+                        En el entorno competitivo de League of Legends, donde la estrategia y la coordinación son
+                        esenciales, la aplicación de herramientas y métodos de machine learning se presenta como un
+                        recurso valioso para optimizar el rendimiento de los equipos. Este análisis detallado se
+                        enfoca en la selección y aplicación de diversas técnicas de machine learning para examinar
+                        partidas clasificatorias Diamante en los primeros 10 minutos del juego.
+                      </p>
+
+                      <h3 id="sub4">4.1 Selección de Modelos <a
+                          href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models">( Ver )</a></h3>
+                      <p>En el proceso de evaluación y predicción del resultado de partidas clasificatorias en League of
+                        Legends, se han aplicado tres modelos de aprendizaje automático: KNN, Random Forest y Decision
+                        Tree.
+                        Cada modelo fue entrenado y evaluado con seis conjuntos distintos de características,
+                        permitiendo
+                        así
+                        una exhaustiva exploración de los factores que impactan en la victoria o derrota del equipo
+                        azul. A
+                        continuación, se presentan los resultados destacados de cada modelo junto con el conjunto de
+                        características que maximizó su precisión:</p>
+                      <v-col cols="10">
+                        <v-data-table dense :headers="headers" :items="modelos" item-key="name" class="elevation-0"
+                          hide-default-footer items-per-page="-1"></v-data-table>
+                      </v-col>
+                      <h3 id="sub4-2">4.2 Construcción y Entrenamiento de Modelos</h3>
+                      <p>
+                        La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de
+                        parámetros. En este contexto:
+                      </p>
+                      <p>
+                        Para la construcción de los modelos, importamos los conjuntos de datos procesados a partir del
+                        conjunto de datos original. Utilizamos los datos del Team Blue para el entrenamiento y los del
+                        Team
+                        Red para la validación. Posteriormente, importamos el diccionario feature.json, que contiene los
+                        arreglos de columnas específicos para cada modelo, junto con otras características relevantes.
+                      </p>
+                      <p>
+                        Para cada conjunto de características, procedemos a construir un modelo correspondiente.
+                        Numeramos y
+                        almacenamos estos modelos para llevar a cabo las validaciones pertinentes posteriormente.
+                      </p>
+                      <v-img src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/img/proceso.png"></v-img>
+                      <p>
+                        En este ejemplo, observamos cómo el uso de cada conjunto de características estimadas influye en
+                        la
+                        evolución de los modelos, como se ilustra específicamente en el caso del algoritmo KNN.
+                      </p>
                       <iframe width="600" height="600"
-                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002A.html"
+                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_features_comparations.html"
                         frameborder="0"></iframe>
-                      <iframe width="600" height="600"
-                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002B.html"
-                        frameborder="0"></iframe>
-                    </v-col></v-row>
-                  <v-row><v-col cols="10">
-                      <h4>Hipótesis 3</h4>
-                      <p>¿Importancia de la ventaja económica y de experiencia?</p>
-                      <h4>Resultado</h4>
-                      <p>Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario en
-                        los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.</p>
-                      <iframe width="600" height="600"
-                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_003.html"
-                        frameborder="0"></iframe>
-                      <h5>Tabla descriptiva:</h5>
-                      <v-data-table dense :headers="headersHypt" :items="hipotesis" item-key="name" class="elevation-0"
-                        hide-default-footer items-per-page="-1"></v-data-table>
-                    </v-col></v-row>
-                  <v-row><v-col cols="10">
-                      <h4>Hipótesis 4</h4>
-                      <p>¿Contribución individual y tasa de victoria?</p>
-                      <h4>Resultado</h4>
-                      <p>Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en la
-                        tasa de victoria de su equipo en las partidas clasificatorias Diamante.</p>
-                      <iframe width="600" height="300"
-                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_004.html"
-                        frameborder="0"></iframe>
-                    </v-col></v-row>
-                  <v-row><v-col cols="10">
-                      <h4>Hipótesis 1</h4>
-                      <p>¿Nivel promedio y probabilidad de victoria?</p>
-                      <h4>Resultado</h4>
-                      <p>Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá
-                        una leve probabilidad de ganar la partida.</p>
-                      <iframe width="600" height="300"
-                        src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_005.html"
-                        frameborder="0"></iframe>
-                    </v-col></v-row>
+
+
+                      <h3 id="sub4-3">4.3 Métricas de Evaluación de Modelos</h3>
+                      <h4 id="sub4-3-1">4.3.1 Precisión, Sensibilidad, Especificidad:</h4>
+                      <p>
+                        Estas métricas evalúan el rendimiento de los modelos en términos de la capacidad para prever
+                        victorias
+                        y derrotas. La precisión mide la proporción de predicciones correctas en general, mientras que
+                        sensibilidad y especificidad se centran en la capacidad del modelo para identificar verdaderos
+                        positivos y verdaderos negativos, respectivamente.
+                      </p>
+                      <h4 id="sub4-3-2">4.3.2 KNN <a
+                          href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/KNN/">( Notebook
+                          )</a>:
+                      </h4>
+                      <p>
+                        En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando
+                        diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en
+                        Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada
+                        modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices
+                        de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró
+                        una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una
+                        variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este
+                        análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas
+                        de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de
+                        consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de
+                        errores.
+                      </p>
+                      <v-row class="pb-6">
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_Matrices_confusión.html"
+                          frameborder="0"></iframe>
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_curve_roc.html"
+                          frameborder="0"></iframe>
+                      </v-row>
+                      <h4 id="sub4-3-2">4.3.2 Random Forest <a
+                          href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/Random_Forest/">(
+                          Notebook
+                          )</a>:</h4>
+                      <p>
+                        En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con
+                        conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones
+                        y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación
+                        detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable
+                        éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos
+                        Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los
+                        objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la
+                        exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
+                      </p>
+                      <v-row class="pb-6">
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_Matrices_confusión.html"
+                          frameborder="0"></iframe>
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_curve_roc.html"
+                          frameborder="0"></iframe>
+                      </v-row>
+                      <h4 id="sub4-3-4">4.3.4 Decision Tree <a
+                          href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/Decision_Tree/">(
+                          Notebook
+                          )</a>:</h4>
+                      <p>
+                        Los modelos, entrenados con diversos conjuntos, exhibieron máximas precisiones, destacando el
+                        Modelo
+                        6 con "Desempeño en Dragones y Heralds" logrando un 71.00%. La evaluación del rendimiento
+                        mediante
+                        matrices de confusión reveló variaciones notables en los patrones de error para cada modelo y
+                        conjunto de características, proporcionando una visión detallada de su desempeño.
+                      </p>
+                      <v-row class="pb-6">
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_Matrices_confusión.html"
+                          frameborder="0"></iframe>
+                        <iframe width="600" height="600"
+                          src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_curve_roc.html"
+                          frameborder="0"></iframe>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+
                 </v-col>
               </v-row>
-              <v-row>
-                <v-col cols="11">
-                  <h2 id="modelos">Herramientas y Métodos de Machine Learning en LoL</h2>
-                  <p>
-                    En el entorno competitivo de League of Legends, donde la estrategia y la coordinación son
-                    esenciales, la aplicación de herramientas y métodos de machine learning se presenta como un
-                    recurso valioso para optimizar el rendimiento de los equipos. Este análisis detallado se
-                    enfoca en la selección y aplicación de diversas técnicas de machine learning para examinar
-                    partidas clasificatorias Diamante en los primeros 10 minutos del juego.
-                  </p>
-
-                  <h3 id="sub4">4.1 Selección de Modelos <a
-                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models">( Ver )</a></h3>
-                  <p>En el proceso de evaluación y predicción del resultado de partidas clasificatorias en League of
-                    Legends, se han aplicado tres modelos de aprendizaje automático: KNN, Random Forest y Decision
-                    Tree.
-                    Cada modelo fue entrenado y evaluado con seis conjuntos distintos de características,
-                    permitiendo
-                    así
-                    una exhaustiva exploración de los factores que impactan en la victoria o derrota del equipo
-                    azul. A
-                    continuación, se presentan los resultados destacados de cada modelo junto con el conjunto de
-                    características que maximizó su precisión:</p>
-                  <v-col cols="10">
-                    <v-data-table dense :headers="headers" :items="modelos" item-key="name" class="elevation-0"
-                      hide-default-footer items-per-page="-1"></v-data-table>
-                  </v-col>
-                  <h3 id="sub4-2">4.2 Construcción y Entrenamiento de Modelos</h3>
-                  <p>
-                    La construcción y entrenamiento de modelos involucran la preparación de datos y el ajuste de
-                    parámetros. En este contexto:
-                  </p>
-                  <p>
-                    Para la construcción de los modelos, importamos los conjuntos de datos procesados a partir del
-                    conjunto de datos original. Utilizamos los datos del Team Blue para el entrenamiento y los del
-                    Team
-                    Red para la validación. Posteriormente, importamos el diccionario feature.json, que contiene los
-                    arreglos de columnas específicos para cada modelo, junto con otras características relevantes.
-                  </p>
-                  <p>
-                    Para cada conjunto de características, procedemos a construir un modelo correspondiente.
-                    Numeramos y
-                    almacenamos estos modelos para llevar a cabo las validaciones pertinentes posteriormente.
-                  </p>
-                  <v-img src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/img/proceso.png"></v-img>
-                  <p>
-                    En este ejemplo, observamos cómo el uso de cada conjunto de características estimadas influye en
-                    la
-                    evolución de los modelos, como se ilustra específicamente en el caso del algoritmo KNN.
-                  </p>
-                  <iframe width="600" height="600"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_features_comparations.html"
-                    frameborder="0"></iframe>
-
-
-                  <h3 id="sub4-3">4.3 Métricas de Evaluación de Modelos</h3>
-                  <h4 id="sub4-3-1">4.3.1 Precisión, Sensibilidad, Especificidad:</h4>
-                  <p>
-                    Estas métricas evalúan el rendimiento de los modelos en términos de la capacidad para prever
-                    victorias
-                    y derrotas. La precisión mide la proporción de predicciones correctas en general, mientras que
-                    sensibilidad y especificidad se centran en la capacidad del modelo para identificar verdaderos
-                    positivos y verdaderos negativos, respectivamente.
-                  </p>
-                  <h4 id="sub4-3-2">4.3.2 KNN <a
-                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/KNN/">( Notebook )</a>:</h4>
-                  <p>
-                    En el análisis del rendimiento de modelos KNN, seis modelos fueron entrenados utilizando
-                    diversos conjuntos de características. Destaca el Modelo 6, centrado en "Desempeño en
-                    Dragones y Heralds", alcanzando una máxima precisión del 71.45%. La optimización de cada
-                    modelo se ilustra en un gráfico de mejora. La evaluación del rendimiento mediante matrices
-                    de confusión revela detalles específicos para cada modelo. Por ejemplo, el Modelo 3 logró
-                    una precisión del 65.18%, con cero falsos negativos, mientras que el Modelo 4 mostró una
-                    variación en los patrones de error con 949 falsos negativos y 3487 falsos positivos. Este
-                    análisis proporciona una visión detallada del rendimiento de cada modelo, destacando áreas
-                    de fortaleza y oportunidades de mejora. La elección del modelo óptimo dependerá de
-                    consideraciones específicas del caso de uso y la importancia atribuida a diferentes tipos de
-                    errores.
-                  </p>
-                  <v-row>
-                    <iframe width="600" height="600"
-                      src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_Matrices_confusión.html"
-                      frameborder="0"></iframe>
-                    <iframe width="600" height="600"
-                      src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_curve_roc.html"
-                      frameborder="0"></iframe>
-                  </v-row>
-                  <h4 id="sub4-3-2">4.3.2 Random Forest <a
-                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/Random_Forest/">( Notebook )</a>:</h4>
-                  <p>
-                    En este estudio del desempeño de modelos Random Forest, se entrenaron seis modelos con
-                    conjuntos específicos de características, destacando el Modelo 6 con "Desempeño en Dragones
-                    y Heralds" como el más preciso, logrando una máxima precisión del 72.27%. La evaluación
-                    detallada mediante matrices de confusión reveló que, aunque este modelo tuvo un notable
-                    éxito con 3564 Verdaderos Positivos, también presentó desafíos, incluyendo 1385 Falsos
-                    Negativos y 1354 Falsos Positivos. La elección del modelo más eficiente dependerá de los
-                    objetivos específicos del caso de uso, y se recomienda una evaluación cuidadosa junto con la
-                    exploración de estrategias adicionales para mejorar el rendimiento global del modelo.
-                  </p>
-                  <v-row>
-                    <iframe width="600" height="600"
-                      src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_Matrices_confusión.html"
-                      frameborder="0"></iframe>
-                    <iframe width="600" height="600"
-                      src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_curve_roc.html"
-                      frameborder="0"></iframe>
-                  </v-row>
-                  <h4 id="sub4-3-4">4.3.4 Decision Tree <a
-                      href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/Decision_Tree/">( Notebook )</a>:</h4>
-                  <p>
-                    Los modelos, entrenados con diversos conjuntos, exhibieron máximas precisiones, destacando el
-                    Modelo
-                    6 con "Desempeño en Dragones y Heralds" logrando un 71.00%. La evaluación del rendimiento
-                    mediante
-                    matrices de confusión reveló variaciones notables en los patrones de error para cada modelo y
-                    conjunto de características, proporcionando una visión detallada de su desempeño.
-                  </p>
-                  <v-row>
-                    <iframe width="600" height="600"
-                      src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_Matrices_confusión.html"
-                      frameborder="0"></iframe>
-                    <iframe width="600" height="600"
-                      src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_curve_roc.html"
-                      frameborder="0"></iframe>
-                  </v-row>
-                </v-col>
-              </v-row>
-
-            </v-col>
-          </v-row>
         </v-container>
       </v-main>
     </v-app>
@@ -572,7 +627,7 @@
       el: '#app',
       vuetify: new Vuetify(),
       data: () => ({
-        drawer: true,
+        indice: false,
         items: [
           { name: 'Introducción', tipo: "title", href: "introduccion" },
           { name: '1.1 Contexto y Justificación del Trabajo', tipo: "subtitle", href: "sub1-1" },

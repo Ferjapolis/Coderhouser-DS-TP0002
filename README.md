@@ -1,4 +1,17 @@
-# ML para el Éxito en el Mundo de League of Legends
+### Proyecto Final
+## ML para el Éxito en el Mundo de League of Legends
+
+> [!NOTE]
+> ### CODERHOUSE
+> - Curso: Data Science
+> - Comisión: 42390
+> - Profesor: Jorge Ruiz
+> - Tutores:
+>   - Aldana Ruscitti
+>   - Facundo Juliá
+>   - Erica Destefano
+
+
 
 ## Indice
 1. Introducción
@@ -17,7 +30,17 @@
     - [3.2 Descripción de las Variables](#32-descripción-de-las-variables)
     - [3.3 Preprocesamiento de Datos](#33-preprocesamiento-de-datos)
     - [3.4 Optimización y Características en el Análisis Estratégico](#34-optimización-y-características-en-el-análisis-estratégico-feature-engineering)
+    - [3.5 Hipótesis](#35-hipótesis-notebook)
 
+4. Herramientas y Métodos de Machine Learning en LoL
+    - [4.1 Selección de Modelos](#41-selección-de-modelos--ver)
+    - [4.2 Construcción y Entrenamiento de Modelos](#42-construcción-y-entrenamiento-de-modelos)
+    - [4.3 Métricas de Evaluación de Modelos](#43-métricas-de-evaluación-de-modelos)
+
+5. Resumen de analisis
+    - [5.1 Unificación de Modelos para Mejor Rendimiento](#51-unificación-de-modelos-para-mejor-rendimiento--notebook)
+
+---
 ## Introducción y Contexto
 ### 1.1 Contexto y Justificación del Análisis
 
@@ -255,7 +278,7 @@ Los modelos, entrenados con diversos conjuntos, exhibieron máximas precisiones,
 ![df_curve_roc](/static/img/df_curve_roc.png)
 
 ## Resumen de analisis
-### 5.2 Unificación de Modelos para Mejor Rendimiento  ( [Notebook](/notebooks/006_Resumen.ipynb) )
+### 5.1 Unificación de Modelos para Mejor Rendimiento  ( [Notebook](/notebooks/006_Resumen.ipynb) )
 Después de obtener tres modelos distintos para cada combinación de características según las estrategias de juego, se avanzó hacia la unificación de estos modelos. Este proceso culminó en la creación de un algoritmo que estima la factibilidad de victoria basándose en los datos procesados por los modelos más efectivos. El resultado de esta síntesis se presenta de manera visual a través de un gráfico, proporcionando así una perspectiva consolidada sobre la probabilidad de éxito en función de las características seleccionadas. Este enfoque integrado busca maximizar la capacidad predictiva y facilitar una comprensión más completa de los factores que influyen en el desempeño en partidas clasificatorias de League of Legends.
 
 ![estimacion_test](/static/img/estimacion_test.png)
@@ -265,3 +288,23 @@ Después de obtener tres modelos distintos para cada combinación de caracterís
 
 
 Aunque algunos modelos presentan un rendimiento inferior en comparación con otros, han demostrado su capacidad para identificar partidas que se desvían del estándar, incluyendo las notorias "remontadas épicas". Además, al considerar una estimación de victoria superior al 50%, se observa que el análisis es capaz de prever victorias con un 88% de precisión en base a los datos examinados. Este enfoque también proporciona insights valiosos al determinar qué estrategias de juego tienen el potencial de ser efectivas para asegurar la victoria en la partida. En conjunto, estos hallazgos resaltan la utilidad de los modelos, incluso aquellos con un rendimiento aparentemente inferior, al ofrecer una comprensión profunda y específica de situaciones de juego únicas.
+
+# Literatura y Recursos de Investigación:
+A continuación, enumero los libros y blogs que he consultado durante el desarrollo del proyecto para aplicar sus enseñanzas de manera efectiva.
+
+## Libros:
+- **Feature Engineering for Machine Learning** - Alice Zheng, Amanda Casari
+- **Bootstrap y Métodos de Ensamblado** - Bradley Efron, Robert J. Tibshirani
+- **Natural Language Processing with Python** - Steven Bird, Ewan Klein, Edward Loper
+
+## Blogs:
+- [GridSearchCV for Beginners](https://towardsdatascience.com/gridsearchcv-for-beginners-db48a90114ee) - Scott Okamura
+- [20 Statistical Concepts Every Data Scientist/Analyst Should Know](https://medium.com/codex/20-statistical-concepts-every-data-scientist-analyst-should-know-2d28a06a5483) - Anmol Tomar
+- [Your Dataset Has Missing Values? Do Nothing!](https://towardsdatascience.com/your-dataset-has-missing-values-do-nothing-10d1633b3727) - 
+Samuele Mazzanti
+- [One-Class SVM For Anomaly Detection](https://medium.com/grabngoinfo/one-class-svm-for-anomaly-detection-6c97fdd6d8af) - Amy @GrabNGoInfo
+- [XGBoost 2.0: Major update on Tree-based methods](https://medium.com/aiguys/xgboost-2-0-major-update-on-tree-based-methods-2e4bc4f15baf) - Vishal Rajput
+- [How to not be dumb at applying Principal Component Analysis (PCA)?](https://medium.com/data-design/how-to-not-be-dumb-at-applying-principal-component-analysis-pca-6c14de5b3c9d) - Laurae
+- [Principal Component Analysis (PCA) Explained Visually with Zero Math](https://towardsdatascience.com/principal-component-analysis-pca-explained-visually-with-zero-math-1cbf392b9e7d) - Casey Cheng
+- [Become a Pokémon Master with Machine Learning](https://towardsdatascience.com/become-a-pok%C3%A9mon-master-with-machine-learning-f61686542ef1) - Kartikeya Rana
+- [ML Dataset — How To Prepare a Good One?](https://betterprogramming.pub/ml-dataset-how-to-prepare-a-good-one-7d92ce1d45e5) - Rafal Pytel

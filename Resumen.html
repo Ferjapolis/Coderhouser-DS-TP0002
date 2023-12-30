@@ -159,12 +159,12 @@
                 <a href="https://www.leagueoflegends.com/es-mx/how-to-play/">Aprender a jugar</a>
               </h4>
               <v-row>
-                <v-col cols="7">
-                  <iframe width="600" height="500" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Historial.html"
+                <v-col lg="7" cols="12">
+                  <iframe class="embed-responsive-item" width="100%" height="500" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Historial.html"
                     frameborder="0"></iframe>
                 </v-col>
-                <v-col cols="5">
+                <v-col lg="5" cols="12">
                   <p class="pt-10">
                     El crecimiento fenomenal de League of Legends no solo se ha manifestado en números, sino también
                     en
@@ -184,7 +184,9 @@
                 </v-col>
               </v-row>
               <h2 id="datos">Datos en League of Legends</h2>
-              <h3 id="sub3-1">3.1 Base de Datos Utilizada</h3>
+              <h3 id="sub3-1">3.1 Base de Datos Utilizada <a
+                href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/data">(
+                Ver )</a></h3>
               <p>
                 El análisis se basa en un conjunto de datos recopilados de partidas clasificatorias Diamante
                 de League of Legends. Estos datos proporcionan una instantánea de las estadísticas clave
@@ -197,7 +199,11 @@
                 El dataset específico, titulado "League of Legends Diamond Ranked Games (10 min)", fue
                 creado y compartido por el autor YI LAN MA.
               </p>
-              <h3 id="sub3-2">3.2 Descripción de las Variables</h3>
+              <h4>
+                <a href="https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min">League of Legends Diamond Ranked Games (10 min)</a>
+              </h4>
+              
+              <h3 class="pt-4" id="sub3-2">3.2 Descripción de las Variables</h3>
               <p>
                 El conjunto de datos contiene diversas variables que capturan diferentes aspectos del
                 desempeño de los equipos. A continuación, se presenta una breve descripción de algunas de
@@ -221,7 +227,7 @@
               </p>
 
               <h3 id="sub3-3">3.3 Preprocesamiento de Datos<a
-                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/000_Wranging.ipynb">(
+                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/notebooks/000_Wranging.ipynb">(
                   Notebook )</a></h3>
               <p>
                 Antes de realizar el análisis exploratorio, se llevó a cabo un proceso de preprocesamiento
@@ -236,17 +242,17 @@
                   formato adecuado para el análisis.</li>
               </ul>
 
-                <iframe width="950" height="950" loading="lazy"
-                  src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/correlacion_total.html"
+                <iframe class="embed-responsive-item" width="100%" height="950" loading="lazy"
+                  src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/correlacion_total.html"
                   frameborder="0"></iframe>
 
 
               <h3 id="sub3-4">3.4 Optimización y Características en el Análisis Estratégico
-                <a href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/005_Features.ipynb">(
+                <a href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/notebooks/005_Features.ipynb">(
                   Notebook )</a>
               </h3>
               <v-row class="pt-4">
-                <v-col cols="7">
+                <v-col lg="7" cols="12">
                   <p>
                     La elección de conjuntos de características en feature engineering es clave para alinearlos
                     con objetivos específicos y conocimiento del juego. Integrar múltiples aspectos del juego
@@ -258,13 +264,13 @@
                     relevantes.
                   </p>
                 </v-col>
-                <v-col cols="3">
+                <v-col lg="2" cols="6" class="text-center">
                   <v-img src="https://i.giphy.com/M1piXuMMzEMi5ySXFK.webp"></v-img>
                 </v-col>
 
               </v-row>
               <v-row>
-                <v-col>
+                <v-col lg="6" cols="12">
                   <h4>Conjunto de Características de Visión:</h4>
                   <ol>
                     <li><strong>Features:</strong>
@@ -285,7 +291,7 @@
                     </li>
                   </ol>
                 </v-col>
-                <v-col>
+                <v-col lg="6" cols="12">
                   <h4>Conjunto de Características de Rendimiento en Combate:</h4>
                   <ol>
                     <li><strong>Features:</strong>
@@ -311,7 +317,7 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col>
+                <v-col lg="6" cols="12">
                   <h4>Conjunto de Características de Desarrollo y Experiencia:</h4>
                   <ol>
                     <li><strong>Features:</strong>
@@ -330,7 +336,7 @@
                     </li>
                   </ol>
                 </v-col>
-                <v-col>
+                <v-col lg="6" cols="12">
                   <h4>Conjunto de Características de Combate Temprano:</h4>
                   <ol>
                     <li><strong>Features:</strong>
@@ -353,7 +359,7 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col>
+                <v-col lg="6" cols="12">
                   <h4>Conjunto de Características Económicas:</h4>
                   <ol>
                     <li><strong>Features:</strong>
@@ -371,7 +377,7 @@
                     </li>
                   </ol>
                 </v-col>
-                <v-col>
+                <v-col lg="6" cols="12">
                   <h4>Conjunto de Características de Desempeño en Dragones y Heralds:</h4>
                   <ol>
                     <li><strong>Features:</strong>
@@ -391,8 +397,8 @@
                   </ol>
                 </v-col>
               </v-row>
-              <h3 id="sub3-5">3.5 Hipótesis <a
-                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/004_Hypothesis.ipynb">(
+              <h3 class="pt-4" id="sub3-5">3.5 Hipótesis <a
+                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/notebooks/004_Hypothesis.ipynb">(
                   Notebook )</a></h3>
               </h3>
               <p>
@@ -403,7 +409,7 @@
                 y la probabilidad de victoria en el juego.
               </p>
               <v-row>
-                <v-col cols="10">
+                <v-col  lg="10" cols="12">
                   <h4>Hipótesis 1</h4>
                   <p>¿Relación entre asesinatos y tasa de victoria?</p>
                   <h4>Resultado</h4>
@@ -411,13 +417,13 @@
                     correlacionará positivamente con su tasa de victoria. Cuanto mayor sea la cantidad de
                     asesinatos, más
                     alta será la probabilidad de ganar.</p>
-                  <iframe width="600" height="400" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_001.html"
+                  <iframe  class="embed-responsive-item" width="100%" height="400" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_001.html"
                     frameborder="0"></iframe>
                 </v-col>
               </v-row>
               <v-row>
-                <v-col cols="10">
+                <v-col lg="10" cols="12">
                   <h4>Hipótesis 2</h4>
                   <p>¿Impacto de objetivos neutrales en la victoria?</p>
                   <h4>Resultado</h4>
@@ -425,24 +431,24 @@
                     probabilidad de ganar la partida, ya que estos objetivos proporcionan beneficios
                     significativos
                     para todo el equipo.</p>
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002A.html"
+                  <iframe  class="embed-responsive-item" width="100%" height="600" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002A.html"
                     frameborder="0"></iframe>
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002B.html"
+                  <iframe  class="embed-responsive-item" width="100%" height="600" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_002B.html"
                     frameborder="0"></iframe>
                 </v-col>
               </v-row>
               <v-row>
-                <v-col cols="10">
+                <v-col lg="10" cols="12">
                   <h4>Hipótesis 3</h4>
                   <p>¿Importancia de la ventaja económica y de experiencia?</p>
                   <h4>Resultado</h4>
                   <p>Equipos que logran una ventaja significativa en oro y experiencia sobre el equipo contrario
                     en
                     los primeros 10 minutos tendrán mayores posibilidades de obtener la victoria.</p>
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_003.html"
+                  <iframe  class="embed-responsive-item" width="100%" height="600" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_003.html"
                     frameborder="0"></iframe>
                   <h5>Tabla descriptiva:</h5>
                   <v-data-table dense :headers="headersHypt" :items="hipotesis" item-key="name" class="elevation-0"
@@ -450,27 +456,27 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col cols="10">
+                <v-col lg="10" cols="12">
                   <h4>Hipótesis 4</h4>
                   <p>¿Contribución individual y tasa de victoria?</p>
                   <h4>Resultado</h4>
                   <p>Jugadores que contribuyen con un mayor número de asistencias tendrán un impacto positivo en
                     la
                     tasa de victoria de su equipo en las partidas clasificatorias Diamante.</p>
-                  <iframe width="600" height="300" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_004.html"
+                  <iframe  class="embed-responsive-item" width="100%" height="300" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_004.html"
                     frameborder="0"></iframe>
                 </v-col>
               </v-row>
               <v-row>
-                <v-col cols="10">
+                <v-col lg="10" cols="12">
                   <h4>Hipótesis 1</h4>
                   <p>¿Nivel promedio y probabilidad de victoria?</p>
                   <h4>Resultado</h4>
                   <p>Un equipo con un mayor nivel promedio de sus jugadores durante los primeros 10 minutos tendrá
                     una leve probabilidad de ganar la partida.</p>
-                  <iframe width="600" height="300" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_005.html"
+                  <iframe  class="embed-responsive-item" width="100%" height="300" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/Hypothesis_005.html"
                     frameborder="0"></iframe>
                 </v-col>
               </v-row>
@@ -483,10 +489,10 @@
                 partidas clasificatorias Diamante en los primeros 10 minutos del juego.
               </p>
               <h3 id="sub4-1">4.1 Selección de Modelos <a
-                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models">( Ver )</a></h3>
+                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/models">( Ver )</a></h3>
 
               <v-row>
-                <v-col cols="10">
+                <v-col lg="10" cols="12">
                   <p>En el proceso de evaluación y predicción del resultado de partidas clasificatorias en
                     League of
                     Legends, se han aplicado tres modelos de aprendizaje automático: KNN, Random Forest y
@@ -498,7 +504,7 @@
                     conjunto de
                     características que maximizó su precisión:</p>
                 </v-col>
-                <v-col cols="2">
+                <v-col lg="2" cols="6"  class="text-center">
                   <v-img src="https://i.giphy.com/M51FEiXf0rhmSQekQN.webp"></v-img>
                 </v-col>
               </v-row>
@@ -525,14 +531,14 @@
                 Numeramos y
                 almacenamos estos modelos para llevar a cabo las validaciones pertinentes posteriormente.
               </p>
-              <v-img width="700" src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/img/proceso.png"></v-img>
+              <v-img width="700" src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/img/proceso.png"></v-img>
               <p>
                 En este ejemplo, observamos cómo el uso de cada conjunto de características estimadas influye en
                 la
                 evolución de los modelos, como se ilustra específicamente en el caso del algoritmo KNN.
               </p>
-              <iframe width="800" height="500" loading="lazy"
-                src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_features_comparations.html"
+              <iframe class="embed-responsive-item" width="100%" height="500" loading="lazy"
+                src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_features_comparations.html"
                 frameborder="0"></iframe><br>
               <h3 id="sub4-3">4.3 Métricas de Evaluación de Modelos</h3>
               <h4 id="sub4-3-1">4.3.1 Precisión, Sensibilidad, Especificidad:</h4>
@@ -544,7 +550,7 @@
                 positivos y verdaderos negativos, respectivamente.
               </p>
               <h4 id="sub4-3-2">4.3.2 KNN <a
-                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/KNN/">( Notebook
+                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/models/KNN/">( Notebook
                   )</a>:
               </h4>
               <p>
@@ -562,16 +568,20 @@
               </p>
               <v-row>
                 <v-row class="pb-6">
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_Matrices_confusión.html"
+                  <v-col  lg="6" cols="12">
+                    <iframe class="embed-responsive-item" width="100%" height="400" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_Matrices_confusión.html"
                     frameborder="0"></iframe>
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_curve_roc.html"
+                  </v-col>
+                  <v-col  lg="6" cols="12">
+                    <iframe class="embed-responsive-item" width="100%" height="600" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/knn_curve_roc.html"
                     frameborder="0"></iframe>
-                </v-row>
+                  </v-col>
+                  </v-row>
               </v-row>
               <h4 id="sub4-3-3">4.3.3 Random Forest <a
-                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/Random_Forest/">(
+                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/models/Random_Forest/">(
                   Notebook
                   )</a>:</h4>
               <p>
@@ -586,16 +596,20 @@
               </p>
               <v-row>
                 <v-row class="pb-6">
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_Matrices_confusión.html"
-                    frameborder="0"></iframe>
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_curve_roc.html"
-                    frameborder="0"></iframe>
+                  <v-col  lg="6" cols="12">
+                    <iframe class="embed-responsive-item" width="100%" height="400" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_Matrices_confusión.html"
+                    frameborder="0"></iframe>  
+                  </v-col>
+                  <v-col  lg="6" cols="12">
+                    <iframe class="embed-responsive-item" width="100%" height="600" loading="lazy"
+                      src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/rf_curve_roc.html"
+                      frameborder="0"></iframe>
+                  </v-col>
                 </v-row>
               </v-row>
               <h4 id="sub4-3-4">4.3.4 Decision Tree <a
-                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/models/Decision_Tree/">(
+                  href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/models/Decision_Tree/">(
                   Notebook
                   )</a>:</h4>
               <p>
@@ -608,12 +622,16 @@
               </p>
               <v-row>
                 <v-row class="pb-6">
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_Matrices_confusión.html"
-                    frameborder="0"></iframe>
-                  <iframe width="600" height="600" loading="lazy"
-                    src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_curve_roc.html"
-                    frameborder="0"></iframe>
+                  <v-col  lg="6" cols="12">
+                    <iframe class="embed-responsive-item" width="100%" height="400" loading="lazy"
+                      src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_Matrices_confusión.html"
+                      frameborder="0"></iframe>
+                  </v-col>
+                  <v-col  lg="6" cols="12">
+                    <iframe class="embed-responsive-item" width="100%" height="600" loading="lazy"
+                      src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/df_curve_roc.html"
+                      frameborder="0"></iframe>
+                  </v-col>
                 </v-row>
               </v-row>
               <v-col>
@@ -621,11 +639,11 @@
                 <h2 id="resumen">Resumen de analisis</h2>
 
                 <h3 id="sub5-1">5.1 Unificación de Modelos para Mejor Rendimiento <a
-                    href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/alpha/notebooks/006_Resumen.ipynb">(
+                    href="http://github.com/Ferjapolis/Coderhouser-DS-TP0002/tree/gh-pages/notebooks/006_Resumen.ipynb">(
                     Ver )</a></h3>
               </v-col>
               <v-row>
-                <v-col cols="9">
+                <v-col lg="9" cols="12">
                   <p>
                     Después de obtener tres modelos distintos para cada combinación de características según las
                     estrategias de juego, se avanzó hacia la unificación de estos modelos. Este proceso culminó
@@ -641,21 +659,24 @@
                     que influyen en el desempeño en partidas clasificatorias de League of Legends.
                   </p>
                 </v-col>
-                <v-col cols="2">
+                <v-col lg="2" cols="6" class="text-center">
                   <v-img src="https://i.giphy.com/83q2KMu3FwddzRicl0.webp"></v-img>
                 </v-col>
               </v-row>
-
-              <v-col>
-                <iframe width="600" height="600" loading="lazy"
-                  src="http://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/estimacion_test.html"
-                  frameborder="0"></iframe>
-                <ul>
-                  <li>Estimación de Porcentaje de Victoria según KNN: 16.67%</li>
-                  <li>Estimación de Porcentaje de Victoria según Decision Tree: 50.0%</li>
-                  <li>Estimación de Porcentaje de Victoria según Random Forest: 33.33%</li>
-                </ul>
-              </v-col>
+              <v-row>
+                <v-col lg="7" cols="12">
+                  <iframe class="embed-responsive-item" width="100%" height="400" loading="lazy"
+                    src="https://ferjapolis.github.io/Coderhouser-DS-TP0002/static/html/estimacion_test.html"
+                    frameborder="0"></iframe>
+                  </v-col>
+                  <v-col lg="5" cols="12">
+                    <ul>
+                      <li>Estimación de Porcentaje de Victoria según KNN: 83.33%</li>
+                      <li>Estimación de Porcentaje de Victoria según Decision Tree: 66.67%</li>
+                      <li>Estimación de Porcentaje de Victoria según Random Forest: 33.33%</li>
+                    </ul>
+                  </v-col>
+                </v-row>
               <p>
                 Aunque algunos modelos presentan un rendimiento inferior en comparación con otros, han
                 demostrado su capacidad para identificar partidas que se desvían del estándar, incluyendo las

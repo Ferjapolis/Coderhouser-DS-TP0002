@@ -1,5 +1,7 @@
 # ML para el Éxito en el Mundo de League of Legends
 
+version WEB ( [IR](https://ferjapolis.github.io/Coderhouser-DS-TP0002/Resumen.html) )
+
 ## Indice
 1. Introducción
     - [1.1 Contexto y Justificación del Trabajo](#11-contexto-y-justificación-del-análisis)
